@@ -130,6 +130,7 @@ async function send(userText) {
       }
     }
     history.push({ role: "assistant", content: assistantText });
+    if (history.length > MAX_HISTORY) history.splice(0, history.length - MAX_HISTORY);
   } catch (err) {
     assistantDiv.textContent = "Error: " + err.message;
   }
