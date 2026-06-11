@@ -20,7 +20,9 @@ def transcribe(pipe, audio: np.ndarray, sample_rate: int = SAMPLE_RATE) -> str:
 
 
 def format_document(entries: list[str]) -> str:
-    pass
+    if not entries:
+        return "(empty)"
+    return "\n".join(f"{i + 1}. {entry}" for i, entry in enumerate(entries))
 
 
 def main():
