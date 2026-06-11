@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from unittest.mock import MagicMock, patch
 
-from app import Recorder, transcribe, format_document, SAMPLE_RATE
+from app import Recorder, transcribe, format_document, main, SAMPLE_RATE
 
 
 def test_format_document_empty_list():
@@ -76,3 +76,11 @@ def test_transcribe_uses_default_sample_rate():
     audio = np.array([0.1], dtype="float32")
     transcribe(mock_pipe, audio)
     mock_pipe.assert_called_once_with({"array": audio, "sampling_rate": SAMPLE_RATE})
+
+
+def test_main_exits_cleanly_on_eof():
+    with patch("app.load_pipeline", return_value=MagicMock()), \
+         patch("builtins.input", side_effect=EOFError), \
+         patch("builtins.print") as mock_print:
+        main()
+    assert any("Goodbye." in str(call) for call in mock_print.call_args_list)

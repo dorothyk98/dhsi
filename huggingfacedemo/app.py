@@ -68,7 +68,7 @@ def main():
     while True:
         try:
             input()
-        except KeyboardInterrupt:
+        except (KeyboardInterrupt, EOFError):
             print("\nGoodbye.")
             break
 
@@ -82,7 +82,7 @@ def main():
         print("Recording... Press Enter to stop.")
         try:
             input()
-        except KeyboardInterrupt:
+        except (KeyboardInterrupt, EOFError):
             recorder.stop()
             print("\nGoodbye.")
             break
