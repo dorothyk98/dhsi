@@ -54,7 +54,65 @@ def format_document(entries: list[str]) -> str:
 
 
 def main():
-    pass
+    print("Loading model... (first run downloads ~800MB)")
+    try:
+        pipe = load_pipeline()
+    except Exception as e:
+        print(f"Failed to load model: {e}")
+        sys.exit(1)
+
+    print("Ready. Press Enter to start recording, Ctrl+C to quit.\n")
+    document: list[str] = []
+    recorder = Recorder()
+
+    while True:
+        try:
+            input()
+        except KeyboardInterrupt:
+            print("\nGoodbye.")
+            break
+
+        try:
+            recorder.start()
+        except sd.PortAudioError as e:
+            print(f"Mic error: {e}")
+            print("Check available devices: python -m sounddevice")
+            sys.exit(1)
+
+        print("Recording... Press Enter to stop.")
+        try:
+            input()
+        except KeyboardInterrupt:
+            recorder.stop()
+            print("\nGoodbye.")
+            break
+
+        audio = recorder.stop()
+
+        if len(audio) == 0:
+            print("(nothing recorded)\n")
+            print("Press Enter to start recording, Ctrl+C to quit.\n")
+            continue
+
+        print("Transcribing...")
+        try:
+            text = transcribe(pipe, audio)
+        except Exception as e:
+            print(f"Transcription error: {e}\n")
+            print("Press Enter to start recording, Ctrl+C to quit.\n")
+            continue
+
+        if not text:
+            print("(no speech detected)\n")
+            print("Press Enter to start recording, Ctrl+C to quit.\n")
+            continue
+
+        document.append(text)
+        print(f'\n> "{text}"\n')
+        print("--- Document so far ---")
+        print(format_document(document))
+        print("-----------------------\n")
+        print("Press Enter to start recording, Ctrl+C to quit.\n")
 
 
 if __name__ == "__main__":
