@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from unittest.mock import MagicMock, patch
 
-from app import Recorder, transcribe, format_document
+from app import Recorder, transcribe, format_document, SAMPLE_RATE
 
 
 def test_format_document_empty_list():
@@ -16,3 +16,41 @@ def test_format_document_single_entry():
 def test_format_document_multiple_entries():
     result = format_document(["first", "second", "third"])
     assert result == "1. first\n2. second\n3. third"
+
+
+def test_recorder_stop_returns_empty_array_when_no_chunks():
+    recorder = Recorder()
+    result = recorder.stop()
+    assert len(result) == 0
+    assert result.dtype == np.float32
+
+
+def test_recorder_stop_concatenates_chunks():
+    recorder = Recorder()
+    recorder._chunks = [np.array([0.1, 0.2], dtype="float32"),
+                        np.array([0.3, 0.4], dtype="float32")]
+    result = recorder.stop()
+    np.testing.assert_array_almost_equal(result, [0.1, 0.2, 0.3, 0.4])
+
+
+def test_recorder_start_creates_and_starts_stream():
+    recorder = Recorder()
+    with patch("app.sd.InputStream") as mock_cls:
+        mock_stream = MagicMock()
+        mock_cls.return_value = mock_stream
+        recorder.start()
+        mock_cls.assert_called_once_with(
+            samplerate=SAMPLE_RATE,
+            channels=1,
+            dtype="float32",
+            callback=recorder._callback,
+        )
+        mock_stream.start.assert_called_once()
+
+
+def test_recorder_start_clears_previous_chunks():
+    recorder = Recorder()
+    recorder._chunks = [np.array([0.9], dtype="float32")]
+    with patch("app.sd.InputStream"):
+        recorder.start()
+    assert recorder._chunks == []
