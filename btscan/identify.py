@@ -75,3 +75,55 @@ def proximity_label(yards: float) -> str:
 
 def within_radius(record: DeviceRecord, radius_yards: float) -> bool:
     return estimate_distance_yards(record.rssi, record.tx_power) <= radius_yards
+
+
+# Heuristics checked in order: device name keywords, advertised service
+# UUIDs, then Apple manufacturer-data message type (first payload byte).
+NAME_HINTS = [
+    ("airpods", "headphones"),
+    ("headphone", "headphones"),
+    ("buds", "earbuds"),
+    ("watch", "watch"),
+    ("iphone", "phone"),
+    ("pixel", "phone"),
+    ("galaxy", "phone"),
+    ("ipad", "tablet"),
+    ("macbook", "computer"),
+    ("tv", "TV"),
+    ("tile", "tracker"),
+    ("keyboard", "keyboard"),
+    ("mouse", "mouse"),
+    ("speaker", "speaker"),
+]
+
+SERVICE_HINTS = {
+    "0000180d-0000-1000-8000-00805f9b34fb": "heart-rate sensor",
+    "00001812-0000-1000-8000-00805f9b34fb": "keyboard/mouse",
+    "0000feed-0000-1000-8000-00805f9b34fb": "tracker (Tile)",
+    "0000fe2c-0000-1000-8000-00805f9b34fb": "accessory (Google Fast Pair)",
+}
+
+APPLE_COMPANY_ID = 0x004C
+APPLE_TYPE_HINTS = {
+    0x02: "beacon (iBeacon)",
+    0x06: "smart-home accessory (HomeKit)",
+    0x07: "headphones/earbuds (AirPods family)",
+    0x09: "speaker or TV (AirPlay)",
+    0x10: "Apple device (phone/Mac)",
+    0x12: "item tracker (Find My)",
+}
+
+
+def guess_type(record: DeviceRecord) -> str:
+    name = (record.name or "").lower()
+    for keyword, label in NAME_HINTS:
+        if keyword in name:
+            return label
+    for uuid in record.service_uuids:
+        label = SERVICE_HINTS.get(uuid.lower())
+        if label:
+            return label
+    apple_payload = record.manufacturer_data.get(APPLE_COMPANY_ID)
+    if apple_payload:
+        return APPLE_TYPE_HINTS.get(apple_payload[0], "Apple device")
+    return "unknown"

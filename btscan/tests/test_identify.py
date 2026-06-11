@@ -1,6 +1,7 @@
 from identify import (
     DeviceRecord,
     estimate_distance_yards,
+    guess_type,
     manufacturer_name,
     proximity_label,
     within_radius,
@@ -61,3 +62,27 @@ def test_within_radius():
     far = make_record(rssi=-95)   # ~30 yd
     assert within_radius(near, 10)
     assert not within_radius(far, 10)
+
+
+def test_name_hint_wins():
+    record = make_record(name="Dorothy's AirPods Pro")
+    assert guess_type(record) == "headphones"
+
+
+def test_service_hint():
+    record = make_record(service_uuids=["0000180D-0000-1000-8000-00805F9B34FB"])
+    assert guess_type(record) == "heart-rate sensor"
+
+
+def test_apple_find_my_tracker():
+    record = make_record(manufacturer_data={0x004C: b"\x12\x19\x00"})
+    assert guess_type(record) == "item tracker (Find My)"
+
+
+def test_apple_fallback():
+    record = make_record(manufacturer_data={0x004C: b"\xff"})
+    assert guess_type(record) == "Apple device"
+
+
+def test_unknown_type():
+    assert guess_type(make_record()) == "unknown"
