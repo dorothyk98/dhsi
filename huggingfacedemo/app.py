@@ -1,10 +1,12 @@
 import sys
 import numpy as np
 import sounddevice as sd
-from transformers import pipeline
+import mlx.core as mx
+from parakeet_mlx import from_pretrained
+from parakeet_mlx.audio import get_logmel
 
 SAMPLE_RATE = 16000
-MODEL_ID = "openai/whisper-large-v3-turbo"
+MODEL_ID = "mlx-community/parakeet-tdt-0.6b-v2"
 
 
 class Recorder:
@@ -36,15 +38,16 @@ class Recorder:
         return np.concatenate(self._chunks)
 
 
-def load_pipeline():
-    return pipeline("automatic-speech-recognition", model=MODEL_ID)
+def load_model():
+    return from_pretrained(MODEL_ID)
 
 
-def transcribe(pipe, audio: np.ndarray, sample_rate: int = SAMPLE_RATE) -> str:
+def transcribe(model, audio: np.ndarray) -> str:
     if len(audio) == 0:
         return ""
-    result = pipe({"array": audio, "sampling_rate": sample_rate})
-    return result["text"].strip()
+    mel = get_logmel(mx.array(audio, dtype=mx.float32), model.preprocessor_config)
+    result = model.generate(mel)[0]
+    return result.text.strip()
 
 
 def format_document(entries: list[str]) -> str:
@@ -54,9 +57,9 @@ def format_document(entries: list[str]) -> str:
 
 
 def main():
-    print("Loading model... (first run downloads ~800MB)")
+    print("Loading model... (first run downloads ~1.2GB)")
     try:
-        pipe = load_pipeline()
+        model = load_model()
     except Exception as e:
         print(f"Failed to load model: {e}")
         sys.exit(1)
@@ -96,7 +99,7 @@ def main():
 
         print("Transcribing...")
         try:
-            text = transcribe(pipe, audio)
+            text = transcribe(model, audio)
         except Exception as e:
             print(f"Transcription error: {e}\n")
             print("Press Enter to start recording, Ctrl+C to quit.\n")

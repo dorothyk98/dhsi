@@ -1,4 +1,4 @@
-torch
-transformers
+parakeet-mlx
+mlx
 sounddevice
 numpy
