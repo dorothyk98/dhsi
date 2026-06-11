@@ -85,6 +85,23 @@ def run_watch(radius):
         console.print("Stopped.")
 
 
+def run_every(minutes, radius):
+    """One full scan every `minutes` minutes, each printed with a timestamp."""
+    try:
+        while True:
+            records = scan_once()
+            stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            table, rows = build_table(records, radius, title=f"Scan at {stamp}")
+            if rows == 0:
+                console.print(f"[{stamp}] No devices detected.")
+            else:
+                console.print(table)
+            console.print(f"Next scan in {minutes:g} min - Ctrl+C to stop.")
+            time.sleep(minutes * 60)
+    except KeyboardInterrupt:
+        console.print("Stopped.")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Scan for nearby Bluetooth (BLE) devices and report what they are."
