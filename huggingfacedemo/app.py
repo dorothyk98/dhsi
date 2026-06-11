@@ -37,11 +37,14 @@ class Recorder:
 
 
 def load_pipeline():
-    pass
+    return pipeline("automatic-speech-recognition", model=MODEL_ID)
 
 
 def transcribe(pipe, audio: np.ndarray, sample_rate: int = SAMPLE_RATE) -> str:
-    pass
+    if len(audio) == 0:
+        return ""
+    result = pipe({"array": audio, "sampling_rate": sample_rate})
+    return result["text"].strip()
 
 
 def format_document(entries: list[str]) -> str:

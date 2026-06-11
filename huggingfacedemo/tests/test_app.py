@@ -54,3 +54,25 @@ def test_recorder_start_clears_previous_chunks():
     with patch("app.sd.InputStream"):
         recorder.start()
     assert recorder._chunks == []
+
+
+def test_transcribe_returns_empty_string_for_empty_audio():
+    mock_pipe = MagicMock()
+    result = transcribe(mock_pipe, np.array([], dtype="float32"))
+    mock_pipe.assert_not_called()
+    assert result == ""
+
+
+def test_transcribe_calls_pipeline_and_strips_whitespace():
+    mock_pipe = MagicMock(return_value={"text": "  hello world  "})
+    audio = np.array([0.1, 0.2, 0.3], dtype="float32")
+    result = transcribe(mock_pipe, audio, sample_rate=16000)
+    mock_pipe.assert_called_once_with({"array": audio, "sampling_rate": 16000})
+    assert result == "hello world"
+
+
+def test_transcribe_uses_default_sample_rate():
+    mock_pipe = MagicMock(return_value={"text": "test"})
+    audio = np.array([0.1], dtype="float32")
+    transcribe(mock_pipe, audio)
+    mock_pipe.assert_called_once_with({"array": audio, "sampling_rate": SAMPLE_RATE})
