@@ -45,3 +45,33 @@ def manufacturer_name(record: DeviceRecord) -> str:
         return "unknown"
     company_id = next(iter(record.manufacturer_data))
     return COMPANY_IDS.get(company_id, f"unknown (0x{company_id:04X})")
+
+
+# Log-distance path-loss model. Constants are conventional BLE values:
+# -59 dBm is a typical RSSI at 1 m when the device doesn't advertise TX
+# power; 41 dB is the approximate free-space loss over 1 m at 2.4 GHz.
+DEFAULT_MEASURED_POWER = -59
+ONE_METER_LOSS_DB = 41
+PATH_LOSS_EXPONENT = 2.5  # between free space (2.0) and cluttered indoor (~3.0)
+METERS_PER_YARD = 0.9144
+
+
+def estimate_distance_yards(rssi: int, tx_power: int | None) -> float:
+    if tx_power is not None:
+        measured_power = tx_power - ONE_METER_LOSS_DB
+    else:
+        measured_power = DEFAULT_MEASURED_POWER
+    meters = 10 ** ((measured_power - rssi) / (10 * PATH_LOSS_EXPONENT))
+    return meters / METERS_PER_YARD
+
+
+def proximity_label(yards: float) -> str:
+    if yards <= 3:
+        return "near"
+    if yards <= 10:
+        return "medium"
+    return "far"
+
+
+def within_radius(record: DeviceRecord, radius_yards: float) -> bool:
+    return estimate_distance_yards(record.rssi, record.tx_power) <= radius_yards
