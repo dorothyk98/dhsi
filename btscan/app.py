@@ -10,6 +10,7 @@ from datetime import datetime
 
 from bleak.exc import BleakError
 from rich.console import Console
+from rich.live import Live
 from rich.table import Table
 
 from identify import (
@@ -69,6 +70,19 @@ def run_once(radius):
         console.print("No devices detected. Is Bluetooth on? (--radius may also be filtering everything out.)")
     else:
         console.print(table)
+
+
+def run_watch(radius):
+    """Repeated short scans feeding a live-updating table. Ctrl+C stops."""
+    try:
+        with Live(console=console, refresh_per_second=4) as live:
+            while True:
+                records = scan_once(duration=3.0)
+                title = f"Live scan {datetime.now():%H:%M:%S} - Ctrl+C to stop"
+                table, _ = build_table(records, radius, title=title)
+                live.update(table)
+    except KeyboardInterrupt:
+        console.print("Stopped.")
 
 
 def main():
