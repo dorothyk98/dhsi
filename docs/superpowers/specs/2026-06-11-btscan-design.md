@@ -80,6 +80,20 @@ Dependencies: `bleak`, `rich` (in `btscan/requirements.txt`).
 - No devices found → friendly "no devices detected" message, not an empty table.
 - Ctrl+C in live/periodic mode → clean exit, no traceback.
 
+## Web export and GitHub Pages (added 2026-06-11)
+
+- `--export` flag: after each scan (any mode), also write results to
+  `btscan/scan.json`.
+- **Privacy:** device names are never written to the export — exports are
+  meant to be published. All other columns are included.
+- `btscan/index.html`: self-contained static page (no frameworks) that
+  describes the project and renders the latest `scan.json` as a table
+  (manufacturer, type, distance, proximity, RSSI, TX power, address) with
+  the scan timestamp. Includes the 3-command publish recipe.
+- GitHub Pages serves the repo's `main` branch root; the page lives at
+  `https://dorothyk98.github.io/dhsi/btscan/`. Results are a pushed
+  snapshot, not live data.
+
 ## Success criteria
 
 - Running `python app.py` on a Mac with Bluetooth on prints a table of nearby

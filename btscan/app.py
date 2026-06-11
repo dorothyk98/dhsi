@@ -13,6 +13,7 @@ from rich.console import Console
 from rich.live import Live
 from rich.table import Table
 
+from export import EXPORT_PATH, write_export
 from identify import (
     estimate_distance_yards,
     guess_type,
@@ -32,12 +33,15 @@ BLUETOOTH_HELP = (
 )
 
 
-def scan_once(duration: float = SCAN_SECONDS):
+def scan_once(duration: float = SCAN_SECONDS, export: bool = False):
     try:
-        return asyncio.run(scan(duration))
+        records = asyncio.run(scan(duration))
     except BleakError as err:
         console.print(BLUETOOTH_HELP.format(err=err))
         sys.exit(1)
+    if export:
+        write_export(records)
+    return records
 
 
 def build_table(records, radius=None, title="Nearby Bluetooth devices"):
@@ -63,8 +67,8 @@ def build_table(records, radius=None, title="Nearby Bluetooth devices"):
     return table, rows
 
 
-def run_once(radius):
-    records = scan_once()
+def run_once(radius, export=False):
+    records = scan_once(export=export)
     table, rows = build_table(records, radius)
     if rows == 0:
         console.print("No devices detected. Is Bluetooth on? (--radius may also be filtering everything out.)")
@@ -72,12 +76,12 @@ def run_once(radius):
         console.print(table)
 
 
-def run_watch(radius):
+def run_watch(radius, export=False):
     """Repeated short scans feeding a live-updating table. Ctrl+C stops."""
     try:
         with Live(console=console, refresh_per_second=4) as live:
             while True:
-                records = scan_once(duration=3.0)
+                records = scan_once(duration=3.0, export=export)
                 title = f"Live scan {datetime.now():%H:%M:%S} - Ctrl+C to stop"
                 table, _ = build_table(records, radius, title=title)
                 live.update(table)
@@ -85,11 +89,11 @@ def run_watch(radius):
         console.print("Stopped.")
 
 
-def run_every(minutes, radius):
+def run_every(minutes, radius, export=False):
     """One full scan every `minutes` minutes, each printed with a timestamp."""
     try:
         while True:
-            records = scan_once()
+            records = scan_once(export=export)
             stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             table, rows = build_table(records, radius, title=f"Scan at {stamp}")
             if rows == 0:
@@ -113,16 +117,19 @@ def main():
                       help="run one scan every MINUTES minutes until Ctrl+C")
     parser.add_argument("--radius", type=int, choices=[10, 15, 20, 25],
                         help="only show devices estimated within this many yards")
+    parser.add_argument("--export", action="store_true",
+                        help=f"also write each scan to {EXPORT_PATH.name} "
+                             "(device names are never exported)")
     args = parser.parse_args()
     if args.every is not None and args.every <= 0:
         parser.error("--every must be a positive number of minutes")
 
     if args.watch:
-        run_watch(args.radius)
+        run_watch(args.radius, args.export)
     elif args.every is not None:
-        run_every(args.every, args.radius)
+        run_every(args.every, args.radius, args.export)
     else:
-        run_once(args.radius)
+        run_once(args.radius, args.export)
 
 
 if __name__ == "__main__":
