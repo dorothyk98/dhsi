@@ -93,6 +93,10 @@ Dependencies: `bleak`, `rich` (in `btscan/requirements.txt`).
 - GitHub Pages serves the repo's `main` branch root; the page lives at
   `https://dorothyk98.github.io/dhsi/btscan/`. Results are a pushed
   snapshot, not live data.
+- `btscan/publish.sh [minutes]` (added 2026-06-12): loop that scans with
+  `--export`, commits `scan.json`, and pushes every N minutes (default 15),
+  keeping the page current while it runs. Failed scans/pushes retry next
+  cycle.
 
 ## Success criteria
 

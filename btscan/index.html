@@ -78,6 +78,10 @@ python3 app.py --export        # also write the scan to scan.json (feeds this pa
 <pre>cd btscan && python3 app.py --export
 git add btscan/scan.json
 git commit -m "data: update published scan" && git push</pre>
+<p>
+  Or keep this page current automatically — <code>./publish.sh 15</code>
+  scans, exports, and pushes every 15 minutes until stopped.
+</p>
 <p>This page shows a pushed snapshot, not live data.</p>
 
 <script>
