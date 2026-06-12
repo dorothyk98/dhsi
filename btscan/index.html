@@ -33,6 +33,8 @@
   .medium { color: #9a6700; }
   .far { color: #888; }
   #scan-meta { color: #666; }
+  #results h3 { margin: 22px 0 4px; }
+  #results h3 .count { color: #888; font-weight: normal; font-size: 0.85em; }
 </style>
 </head>
 <body>
@@ -88,24 +90,33 @@ git commit -m "data: update published scan" && git push</pre>
     .then((scan) => {
       document.getElementById("scan-meta").textContent =
         `${scan.device_count} devices · scanned ${scan.scanned_at} (scanner's local time)`;
-      const rows = scan.devices.map((d) => `
-        <tr>
-          <td>${d.manufacturer}</td>
-          <td>${d.type}</td>
-          <td>~${d.distance_yards} yd</td>
-          <td class="${d.proximity}">${d.proximity}</td>
-          <td>${d.rssi_dbm} dBm</td>
-          <td>${d.tx_power_dbm ?? "—"}</td>
-          <td><code>${d.address.slice(0, 8)}…</code></td>
-        </tr>`).join("");
-      document.getElementById("results").innerHTML = `
-        <table>
-          <thead><tr>
-            <th>Manufacturer</th><th>Type</th><th>Distance</th><th>Proximity</th>
-            <th>RSSI</th><th>TX power</th><th>Address</th>
-          </tr></thead>
-          <tbody>${rows}</tbody>
-        </table>`;
+      const groups = new Map();
+      for (const d of scan.devices) {
+        if (!groups.has(d.type)) groups.set(d.type, []);
+        groups.get(d.type).push(d);
+      }
+      const byCount = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
+      document.getElementById("results").innerHTML = byCount.map(([type, devices]) => {
+        devices.sort((a, b) => a.distance_yards - b.distance_yards);
+        const rows = devices.map((d) => `
+          <tr>
+            <td>${d.manufacturer}</td>
+            <td>~${d.distance_yards} yd</td>
+            <td class="${d.proximity}">${d.proximity}</td>
+            <td>${d.rssi_dbm} dBm</td>
+            <td>${d.tx_power_dbm ?? "—"}</td>
+            <td><code>${d.address.slice(0, 8)}…</code></td>
+          </tr>`).join("");
+        return `
+          <h3>${type} <span class="count">${devices.length} device${devices.length === 1 ? "" : "s"}</span></h3>
+          <table>
+            <thead><tr>
+              <th>Manufacturer</th><th>Distance</th><th>Proximity</th>
+              <th>RSSI</th><th>TX power</th><th>Address</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>`;
+      }).join("");
     })
     .catch((err) => {
       document.getElementById("scan-meta").textContent =
