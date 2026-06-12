@@ -9,9 +9,10 @@ import time
 from datetime import datetime
 
 from bleak.exc import BleakError
-from rich.console import Console
+from rich.console import Console, Group
 from rich.live import Live
 from rich.table import Table
+from rich.text import Text
 
 from export import EXPORT_PATH, write_export
 from identify import (
@@ -45,26 +46,34 @@ def scan_once(duration: float = SCAN_SECONDS, export: bool = False):
 
 
 def build_table(records, radius=None, title="Nearby Bluetooth devices"):
-    """Return (table, row_count); rows outside `radius` yards are dropped."""
-    table = Table(title=title)
-    for column in ("Name", "Manufacturer", "Type", "Distance", "RSSI", "TX power", "Address"):
-        table.add_column(column)
+    """Return (renderable, row_count): one table per device type, largest
+    group first, nearest device first within each group. Rows outside
+    `radius` yards are dropped."""
+    groups = {}
     rows = 0
     for record in records:
         if radius is not None and not within_radius(record, radius):
             continue
-        yards = estimate_distance_yards(record.rssi, record.tx_power)
-        table.add_row(
-            record.name or "(hidden)",
-            manufacturer_name(record),
-            guess_type(record),
-            f"~{yards:.0f} yd ({proximity_label(yards)})",
-            f"{record.rssi} dBm",
-            f"{record.tx_power} dBm" if record.tx_power is not None else "-",
-            record.address,
-        )
+        groups.setdefault(guess_type(record), []).append(record)
         rows += 1
-    return table, rows
+    tables = []
+    for type_label, members in sorted(groups.items(), key=lambda kv: len(kv[1]), reverse=True):
+        members.sort(key=lambda r: estimate_distance_yards(r.rssi, r.tx_power))
+        table = Table(title=f"{type_label} ({len(members)})")
+        for column in ("Name", "Manufacturer", "Distance", "RSSI", "TX power", "Address"):
+            table.add_column(column)
+        for record in members:
+            yards = estimate_distance_yards(record.rssi, record.tx_power)
+            table.add_row(
+                record.name or "(hidden)",
+                manufacturer_name(record),
+                f"~{yards:.0f} yd ({proximity_label(yards)})",
+                f"{record.rssi} dBm",
+                f"{record.tx_power} dBm" if record.tx_power is not None else "-",
+                record.address,
+            )
+        tables.append(table)
+    return Group(Text(title, style="bold", justify="center"), *tables), rows
 
 
 def run_once(radius, export=False):
