@@ -1,60 +1,60 @@
 {
- "scanned_at": "2026-06-12 09:23:49",
- "device_count": 269,
+ "scanned_at": "2026-06-12 10:12:59",
+ "device_count": 267,
  "devices": [
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 0.4,
-   "proximity": "near",
-   "rssi_dbm": -47,
-   "tx_power_dbm": null,
-   "address": "CA517075-8774-3EF0-6081-77EAC06FA02C"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 0.4,
-   "proximity": "near",
-   "rssi_dbm": -48,
-   "tx_power_dbm": null,
-   "address": "3F060969-345A-5F55-5F89-BA26A177A497"
-  },
-  {
-   "manufacturer": "Apple",
    "type": "phone",
-   "distance_yards": 6.3,
-   "proximity": "medium",
-   "rssi_dbm": -48,
+   "distance_yards": 1.7,
+   "proximity": "near",
+   "rssi_dbm": -34,
    "tx_power_dbm": 12,
    "address": "FB6EE8DE-C43C-7020-08A4-E977114F11A0"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 6.9,
-   "proximity": "medium",
-   "rssi_dbm": -49,
-   "tx_power_dbm": 12,
-   "address": "8272B0B9-2D12-D463-432D-B4B5DF1A1B4C"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 6.9,
-   "proximity": "medium",
-   "rssi_dbm": -49,
-   "tx_power_dbm": 12,
-   "address": "677CE16D-02AC-1B0D-D38B-E9AEE454E14F"
+   "type": "item tracker (Find My)",
+   "distance_yards": 0.1,
+   "proximity": "near",
+   "rssi_dbm": -37,
+   "tx_power_dbm": null,
+   "address": "DFA3DA4B-3E4A-93F2-A6BC-7BCB7B6A756B"
   },
   {
    "manufacturer": "Apple",
    "type": "item tracker (Find My)",
    "distance_yards": 0.4,
    "proximity": "near",
+   "rssi_dbm": -47,
+   "tx_power_dbm": null,
+   "address": "6B04E5BF-AA68-6114-EA4F-1F45CA56DBEC"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 0.4,
+   "proximity": "near",
+   "rssi_dbm": -48,
+   "tx_power_dbm": null,
+   "address": "C362DD21-D8B4-B69B-796A-064FBE385BA7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.4,
+   "proximity": "near",
    "rssi_dbm": -49,
    "tx_power_dbm": null,
-   "address": "BB98C0E6-739A-AB45-B0CC-43A495528F40"
+   "address": "740B280F-9835-4E31-E368-AB72B0D08FAC"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 0.5,
+   "proximity": "near",
+   "rssi_dbm": -50,
+   "tx_power_dbm": null,
+   "address": "A6B2C985-D0E5-CAC6-16C7-2AD8E59DD1AE"
   },
   {
    "manufacturer": "Apple",
@@ -63,7 +63,16 @@
    "proximity": "near",
    "rssi_dbm": -50,
    "tx_power_dbm": null,
-   "address": "08F39EB3-7AC0-1980-781F-B0023001E94A"
+   "address": "4EA56514-47C8-68A1-43C0-C9111500A093"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.5,
+   "proximity": "near",
+   "rssi_dbm": -50,
+   "tx_power_dbm": null,
+   "address": "46093FC0-2006-F838-318F-10457D99DC9F"
   },
   {
    "manufacturer": "Apple",
@@ -72,25 +81,7 @@
    "proximity": "near",
    "rssi_dbm": -51,
    "tx_power_dbm": null,
-   "address": "DE6B808E-271C-39F6-D773-583B26555237"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 0.5,
-   "proximity": "near",
-   "rssi_dbm": -51,
-   "tx_power_dbm": null,
-   "address": "2B60E397-DDEB-1596-E190-DF884E4CD252"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 0.6,
-   "proximity": "near",
-   "rssi_dbm": -52,
-   "tx_power_dbm": null,
-   "address": "4A00FF6A-3F01-2E3C-D9F0-7113B6EA4CCE"
+   "address": "83BFCA0E-C501-C8A3-84FE-BB434E5799AD"
   },
   {
    "manufacturer": "Even Realities",
@@ -102,13 +93,22 @@
    "address": "F471AE8A-F2DE-E6BA-D438-3D5CB086F692"
   },
   {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
    "distance_yards": 0.7,
    "proximity": "near",
    "rssi_dbm": -54,
    "tx_power_dbm": null,
-   "address": "EFB8D330-813C-0B78-DB5D-7FF32210AA50"
+   "address": "7F891023-C58E-95D3-A72E-CE75A955A8EA"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 0.7,
+   "proximity": "near",
+   "rssi_dbm": -54,
+   "tx_power_dbm": null,
+   "address": "DD6D169B-E814-5D9D-0BF2-CDAE3ACA103E"
   },
   {
    "manufacturer": "Apple",
@@ -117,7 +117,7 @@
    "proximity": "near",
    "rssi_dbm": -54,
    "tx_power_dbm": null,
-   "address": "A14DCE0A-C52A-59CE-57F4-43E76FBAAE82"
+   "address": "6CE84C42-FE4A-9413-6F68-5EDB202DA1C7"
   },
   {
    "manufacturer": "Apple",
@@ -126,16 +126,61 @@
    "proximity": "near",
    "rssi_dbm": -54,
    "tx_power_dbm": null,
-   "address": "966313F2-630A-C43F-ACBF-3393AEBCCEAC"
+   "address": "10B870C4-7C2E-D48E-3D28-B0D0CD6A38C1"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 19.0,
-   "proximity": "far",
+   "type": "Apple device",
+   "distance_yards": 0.7,
+   "proximity": "near",
+   "rssi_dbm": -54,
+   "tx_power_dbm": null,
+   "address": "E4F101F0-A15A-0C26-8F07-1D2520BCBD2E"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 0.7,
+   "proximity": "near",
+   "rssi_dbm": -54,
+   "tx_power_dbm": null,
+   "address": "FD4CD562-9C88-44AC-BBB3-D775159CC842"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.7,
+   "proximity": "near",
+   "rssi_dbm": -54,
+   "tx_power_dbm": null,
+   "address": "316B47BA-B82E-D46D-054F-5DB40F1668E5"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.7,
+   "proximity": "near",
+   "rssi_dbm": -54,
+   "tx_power_dbm": null,
+   "address": "1C560FAC-C172-D9C4-F9E6-90334A3B65B4"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.8,
+   "proximity": "near",
    "rssi_dbm": -55,
-   "tx_power_dbm": 17,
-   "address": "36610856-7F8C-0B1C-5318-105F65306B3A"
+   "tx_power_dbm": null,
+   "address": "E8BB99BE-7759-6967-03D0-35D4C69E3A20"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 0.8,
+   "proximity": "near",
+   "rssi_dbm": -55,
+   "tx_power_dbm": null,
+   "address": "1B38A1EC-A12C-F8AF-5252-11B53CCCB581"
   },
   {
    "manufacturer": "Microsoft",
@@ -144,61 +189,43 @@
    "proximity": "near",
    "rssi_dbm": -55,
    "tx_power_dbm": null,
-   "address": "F2F5CC47-899A-230B-0FA8-54EB4317BDA1"
+   "address": "6EB9EFC6-6FA9-E478-2AC1-39777E44CBD8"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.8,
+   "proximity": "near",
+   "rssi_dbm": -55,
+   "tx_power_dbm": null,
+   "address": "770FD9B2-C148-E6F3-1477-AFDC972EA0A3"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 0.8,
+   "proximity": "near",
+   "rssi_dbm": -55,
+   "tx_power_dbm": null,
+   "address": "30A97AA5-0F9E-3AAB-0D8B-D2CA614878D0"
   },
   {
    "manufacturer": "Microsoft",
    "type": "unknown",
    "distance_yards": 0.8,
    "proximity": "near",
-   "rssi_dbm": -55,
+   "rssi_dbm": -56,
    "tx_power_dbm": null,
-   "address": "53A2AB0E-BD8A-00B8-E3F8-B49F99316BBA"
+   "address": "01B0B249-EA73-7538-1900-EEC05E9318B0"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 10.0,
+   "distance_yards": 4.4,
    "proximity": "medium",
    "rssi_dbm": -56,
-   "tx_power_dbm": 9,
-   "address": "C8062D11-1C12-101B-4164-FE0C121C4BAE"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 13.1,
-   "proximity": "far",
-   "rssi_dbm": -56,
-   "tx_power_dbm": 12,
-   "address": "FD3CF0FF-1115-49AD-E19A-D531DEA05A63"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 14.4,
-   "proximity": "far",
-   "rssi_dbm": -57,
-   "tx_power_dbm": 12,
-   "address": "F161F060-7532-A6F9-7B54-2F42C1E805F7"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 0.9,
-   "proximity": "near",
-   "rssi_dbm": -57,
-   "tx_power_dbm": null,
-   "address": "2130C7AB-748E-611A-4B66-91E95CEC2E61"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 0.9,
-   "proximity": "near",
-   "rssi_dbm": -57,
-   "tx_power_dbm": null,
-   "address": "ADD31154-36CB-7146-D4FA-43FF529C3339"
+   "tx_power_dbm": 0,
+   "address": "2043D7FB-71D5-5160-CB85-CB905A7617BC"
   },
   {
    "manufacturer": "Apple",
@@ -207,25 +234,25 @@
    "proximity": "medium",
    "rssi_dbm": -57,
    "tx_power_dbm": 0,
-   "address": "B0FB207C-7E04-FA79-9D22-E96E430239BF"
+   "address": "20196F32-98BA-9BD3-A668-53F56C9273C1"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 4.8,
-   "proximity": "medium",
+   "type": "Apple device",
+   "distance_yards": 0.9,
+   "proximity": "near",
    "rssi_dbm": -57,
-   "tx_power_dbm": 0,
-   "address": "C98C048F-A693-C917-3302-1273176EE048"
+   "tx_power_dbm": null,
+   "address": "E9548E57-75FF-8262-243E-71B7A049EFA5"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 14.4,
-   "proximity": "far",
+   "type": "Apple device",
+   "distance_yards": 0.9,
+   "proximity": "near",
    "rssi_dbm": -57,
-   "tx_power_dbm": 12,
-   "address": "15E46F8E-BE5E-201C-59B5-EC7E97D39050"
+   "tx_power_dbm": null,
+   "address": "850EE19D-DB68-6D46-2021-6DBA2DB2802F"
   },
   {
    "manufacturer": "Apple",
@@ -234,250 +261,259 @@
    "proximity": "near",
    "rssi_dbm": -57,
    "tx_power_dbm": null,
-   "address": "5D478181-E0B4-4E4E-255A-9418DB0C3C12"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.0,
-   "proximity": "near",
-   "rssi_dbm": -58,
-   "tx_power_dbm": null,
-   "address": "A2C17578-869B-B838-F659-08191F13E069"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.0,
-   "proximity": "near",
-   "rssi_dbm": -58,
-   "tx_power_dbm": null,
-   "address": "CB22F8DC-2FA3-5D1C-0593-AC9CB74BFA04"
+   "address": "E77219CE-0A51-902E-1A50-915EB77C690C"
   },
   {
    "manufacturer": "Apple",
    "type": "item tracker (Find My)",
-   "distance_yards": 1.0,
+   "distance_yards": 0.9,
    "proximity": "near",
-   "rssi_dbm": -58,
+   "rssi_dbm": -57,
    "tx_power_dbm": null,
-   "address": "A1A30B12-30E4-E4B3-297E-0FF5C6CEC70E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.1,
-   "proximity": "near",
-   "rssi_dbm": -59,
-   "tx_power_dbm": null,
-   "address": "C4C90FAA-EB5E-FE9F-A5C6-EA6D98330703"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.1,
-   "proximity": "near",
-   "rssi_dbm": -59,
-   "tx_power_dbm": null,
-   "address": "04C47FAE-57FD-8BFB-39DF-AB96F11EA058"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.1,
-   "proximity": "near",
-   "rssi_dbm": -59,
-   "tx_power_dbm": null,
-   "address": "0BFA466D-98A4-5FD2-12F6-450ED13CE5DE"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.1,
-   "proximity": "near",
-   "rssi_dbm": -59,
-   "tx_power_dbm": null,
-   "address": "7EF9DB9D-437F-724C-3D48-5756941B8612"
+   "address": "8FF04225-CA41-5BC9-8379-6600977A3733"
   },
   {
    "manufacturer": "Apple",
    "type": "speaker or TV (AirPlay)",
-   "distance_yards": 1.2,
+   "distance_yards": 1.0,
    "proximity": "near",
-   "rssi_dbm": -60,
+   "rssi_dbm": -58,
    "tx_power_dbm": null,
-   "address": "78E4B97B-97DB-15B7-9160-64E933672540"
+   "address": "5B8E8E66-F042-15CE-D6E2-3664F5414D19"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 14.4,
+   "proximity": "far",
+   "rssi_dbm": -58,
+   "tx_power_dbm": 11,
+   "address": "9268A209-8AB4-EB88-4E0E-DD973B59315C"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 1.2,
+   "distance_yards": 1.0,
    "proximity": "near",
-   "rssi_dbm": -60,
+   "rssi_dbm": -58,
    "tx_power_dbm": null,
-   "address": "150C90E6-B492-B5E1-B885-36A60EF71AA9"
+   "address": "00F80555-4FDE-9BF0-414E-44ADD018D3AD"
+  },
+  {
+   "manufacturer": "Even Realities",
+   "type": "smart glasses",
+   "distance_yards": 1.0,
+   "proximity": "near",
+   "rssi_dbm": -58,
+   "tx_power_dbm": null,
+   "address": "2F30AF0C-8078-C3B1-4733-86B9C4EEB9CE"
   },
   {
    "manufacturer": "Apple",
    "type": "speaker or TV (AirPlay)",
-   "distance_yards": 1.2,
+   "distance_yards": 1.0,
    "proximity": "near",
-   "rssi_dbm": -60,
+   "rssi_dbm": -58,
    "tx_power_dbm": null,
-   "address": "55877C4D-379E-DA66-3198-7E3AB7871F54"
+   "address": "FBF2CE72-A04D-CCE3-47CF-A089AFC9E167"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 1.0,
+   "proximity": "near",
+   "rssi_dbm": -58,
+   "tx_power_dbm": null,
+   "address": "2E5E8BB0-95C2-6AF8-78B2-EE3518FE2532"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
    "distance_yards": 12.0,
    "proximity": "far",
-   "rssi_dbm": -60,
-   "tx_power_dbm": 7,
-   "address": "8A2276EF-2850-A7D1-5195-658CB228CC93"
+   "rssi_dbm": -59,
+   "tx_power_dbm": 8,
+   "address": "9BE43147-3B8B-57D8-A55E-A85CEAA272F5"
   },
   {
-   "manufacturer": "unknown",
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 17.3,
+   "proximity": "far",
+   "rssi_dbm": -59,
+   "tx_power_dbm": 12,
+   "address": "1BACE32B-E877-E7DD-68F3-1B5C0F2E9362"
+  },
+  {
+   "manufacturer": "Microsoft",
    "type": "unknown",
-   "distance_yards": 1.3,
+   "distance_yards": 1.1,
    "proximity": "near",
-   "rssi_dbm": -61,
+   "rssi_dbm": -59,
    "tx_power_dbm": null,
-   "address": "8A31CDBA-5694-3BCC-FDC7-999262AE64B0"
+   "address": "2C114E2C-400E-6B5D-F435-C65ADA464593"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 20.8,
+   "distance_yards": 17.3,
    "proximity": "far",
-   "rssi_dbm": -61,
+   "rssi_dbm": -59,
    "tx_power_dbm": 12,
-   "address": "679DEF07-641B-94B6-2D3A-F60777674FBD"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.3,
-   "proximity": "near",
-   "rssi_dbm": -61,
-   "tx_power_dbm": null,
-   "address": "1356B279-4E1E-C976-B9D9-5E8F08DA3B4E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.3,
-   "proximity": "near",
-   "rssi_dbm": -61,
-   "tx_power_dbm": null,
-   "address": "1A495ED9-5732-CB0B-D60F-7467ED994B43"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 20.8,
-   "proximity": "far",
-   "rssi_dbm": -61,
-   "tx_power_dbm": 12,
-   "address": "4F1FE5C5-5745-1ECD-9D44-89B1EF48D187"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.3,
-   "proximity": "near",
-   "rssi_dbm": -61,
-   "tx_power_dbm": null,
-   "address": "F066A4B8-1142-F665-339E-8D5CFC305254"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 20.8,
-   "proximity": "far",
-   "rssi_dbm": -62,
-   "tx_power_dbm": 11,
-   "address": "47D66591-2ADE-96AF-DC8F-1B529CDC6443"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.4,
-   "proximity": "near",
-   "rssi_dbm": -62,
-   "tx_power_dbm": null,
-   "address": "729F83B5-3BD2-44F2-369C-17947820306E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.4,
-   "proximity": "near",
-   "rssi_dbm": -62,
-   "tx_power_dbm": null,
-   "address": "95911CDF-6743-65CC-F305-BC4017163B16"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 22.8,
-   "proximity": "far",
-   "rssi_dbm": -62,
-   "tx_power_dbm": 12,
-   "address": "543DAFDB-BAEA-F0BC-4B69-4820579EFFA3"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 3.3,
-   "proximity": "medium",
-   "rssi_dbm": -62,
-   "tx_power_dbm": -9,
-   "address": "8258B8DF-0492-506C-563B-6B66DF56C238"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.6,
-   "proximity": "near",
-   "rssi_dbm": -63,
-   "tx_power_dbm": null,
-   "address": "658772E8-46FB-5822-7F8D-A7E21F1CE37A"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.6,
-   "proximity": "near",
-   "rssi_dbm": -63,
-   "tx_power_dbm": null,
-   "address": "57B65D6B-B3FA-D112-F49B-210AA366875E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.6,
-   "proximity": "near",
-   "rssi_dbm": -63,
-   "tx_power_dbm": null,
-   "address": "91950672-CFF1-A597-97A7-D77291813298"
+   "address": "181723F4-D469-DD32-EB6C-DDB753756D6F"
   },
   {
    "manufacturer": "Apple",
    "type": "speaker or TV (AirPlay)",
-   "distance_yards": 1.6,
+   "distance_yards": 1.1,
    "proximity": "near",
-   "rssi_dbm": -63,
+   "rssi_dbm": -59,
    "tx_power_dbm": null,
-   "address": "22E46FFF-79B1-182D-BB73-90AE2B668EAC"
+   "address": "592760C0-9CB8-D390-2801-3DCFEC2D1E7B"
   },
   {
    "manufacturer": "Apple",
    "type": "item tracker (Find My)",
-   "distance_yards": 1.7,
+   "distance_yards": 1.1,
    "proximity": "near",
-   "rssi_dbm": -64,
+   "rssi_dbm": -59,
    "tx_power_dbm": null,
-   "address": "F60582CA-4982-36DB-7384-44C89671A45E"
+   "address": "F3C41D8B-61DA-0DAE-9686-06A8941CFB10"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 1.2,
+   "proximity": "near",
+   "rssi_dbm": -60,
+   "tx_power_dbm": null,
+   "address": "C8D4FF73-8FBE-3F82-4EEE-D4A9D53EBE11"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 1.2,
+   "proximity": "near",
+   "rssi_dbm": -60,
+   "tx_power_dbm": null,
+   "address": "41383156-122C-F208-CEE4-04174E0DBB72"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 1.2,
+   "proximity": "near",
+   "rssi_dbm": -60,
+   "tx_power_dbm": null,
+   "address": "C10A5C95-C8DF-4676-C7C2-C181825FEBD5"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 1.3,
+   "proximity": "near",
+   "rssi_dbm": -61,
+   "tx_power_dbm": null,
+   "address": "5D0D3E3D-4658-6C57-CE5B-852921B9191B"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 1.3,
+   "proximity": "near",
+   "rssi_dbm": -61,
+   "tx_power_dbm": null,
+   "address": "8E3E74D0-1880-6DD1-6356-E652E83399B9"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 20.8,
+   "proximity": "far",
+   "rssi_dbm": -61,
+   "tx_power_dbm": 12,
+   "address": "76F97576-EDBE-7676-3726-AAF6FDC0CE92"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 20.8,
+   "proximity": "far",
+   "rssi_dbm": -61,
+   "tx_power_dbm": 12,
+   "address": "4B9D0A02-B6A0-0169-4B2D-D965A5A3AD85"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 1.3,
+   "proximity": "near",
+   "rssi_dbm": -61,
+   "tx_power_dbm": null,
+   "address": "15409643-A66A-F522-AC67-B23B7B940BC4"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 1.4,
+   "proximity": "near",
+   "rssi_dbm": -62,
+   "tx_power_dbm": null,
+   "address": "A9400D50-FEFD-95DE-4146-3E96C6AD27F8"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 1.4,
+   "proximity": "near",
+   "rssi_dbm": -62,
+   "tx_power_dbm": null,
+   "address": "ED680959-F61E-D95A-C4B6-9E2676B55128"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 17.3,
+   "proximity": "far",
+   "rssi_dbm": -62,
+   "tx_power_dbm": 9,
+   "address": "68EF09D9-582F-917B-6579-3ADD7FBBC290"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 7.6,
+   "proximity": "medium",
+   "rssi_dbm": -62,
+   "tx_power_dbm": 0,
+   "address": "81B10E72-3404-2A2D-A33A-12C278A5491A"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 25.1,
+   "proximity": "far",
+   "rssi_dbm": -63,
+   "tx_power_dbm": 12,
+   "address": "1F8888D2-2023-3113-AEEF-B2A104969BEA"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 1.6,
+   "proximity": "near",
+   "rssi_dbm": -63,
+   "tx_power_dbm": null,
+   "address": "3022488F-1A7D-8D46-EF7B-69260B0BB369"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 8.3,
+   "proximity": "medium",
+   "rssi_dbm": -63,
+   "tx_power_dbm": 0,
+   "address": "CC1D0406-B762-A263-91A0-3CF47CE8C582"
   },
   {
    "manufacturer": "Apple",
@@ -486,187 +522,223 @@
    "proximity": "far",
    "rssi_dbm": -64,
    "tx_power_dbm": 12,
-   "address": "B7ED7DF0-516B-7D80-24B8-F2658313D51D"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 1.7,
-   "proximity": "near",
-   "rssi_dbm": -64,
-   "tx_power_dbm": null,
-   "address": "4AACC037-219C-0D2A-355E-8B2057469156"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.7,
-   "proximity": "near",
-   "rssi_dbm": -64,
-   "tx_power_dbm": null,
-   "address": "65397724-59C7-D462-D5D2-87FDBDFC8574"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 1.9,
-   "proximity": "near",
-   "rssi_dbm": -65,
-   "tx_power_dbm": null,
-   "address": "5270F1E5-9A05-4245-6CB2-70A567EACB92"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 1.9,
-   "proximity": "near",
-   "rssi_dbm": -65,
-   "tx_power_dbm": null,
-   "address": "C6820295-F52A-B972-70D2-58E933175AE4"
+   "address": "3B10CE54-394B-13DA-7BBB-DE19ADDCEA32"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 10.0,
+   "distance_yards": 43.5,
+   "proximity": "far",
+   "rssi_dbm": -64,
+   "tx_power_dbm": 17,
+   "address": "F2885167-B0C9-B1CF-B3E2-112B6B2DE890"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 9.1,
    "proximity": "medium",
-   "rssi_dbm": -65,
+   "rssi_dbm": -64,
    "tx_power_dbm": 0,
-   "address": "31946E9C-9B78-109C-0940-A275203345DF"
-  },
-  {
-   "manufacturer": "Even Realities",
-   "type": "smart glasses",
-   "distance_yards": 1.9,
-   "proximity": "near",
-   "rssi_dbm": -65,
-   "tx_power_dbm": null,
-   "address": "2F30AF0C-8078-C3B1-4733-86B9C4EEB9CE"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 2.1,
-   "proximity": "near",
-   "rssi_dbm": -66,
-   "tx_power_dbm": null,
-   "address": "5BE09FFE-F6D3-351C-146A-DA59195931FA"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 2.1,
-   "proximity": "near",
-   "rssi_dbm": -66,
-   "tx_power_dbm": null,
-   "address": "C5D80FA0-5875-BDB0-7071-D82172817127"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "headphones/earbuds (AirPods family)",
-   "distance_yards": 2.1,
-   "proximity": "near",
-   "rssi_dbm": -66,
-   "tx_power_dbm": null,
-   "address": "6AA7FCD6-78DB-0079-2878-8CF7E65F3CAE"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 10.9,
-   "proximity": "far",
-   "rssi_dbm": -66,
-   "tx_power_dbm": 0,
-   "address": "B447F76F-58B1-2FD6-D6C3-473D5AA87CCF"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 10.9,
-   "proximity": "far",
-   "rssi_dbm": -66,
-   "tx_power_dbm": 0,
-   "address": "1CFDC00B-4F82-1734-E4B2-82CAFA472574"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 2.1,
-   "proximity": "near",
-   "rssi_dbm": -66,
-   "tx_power_dbm": null,
-   "address": "0E8FFEC0-A751-D46D-03D4-E11CC034FAB3"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 2.1,
-   "proximity": "near",
-   "rssi_dbm": -66,
-   "tx_power_dbm": null,
-   "address": "FDC14004-2EA1-DFE6-630F-478E8DB02BC7"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 33.0,
-   "proximity": "far",
-   "rssi_dbm": -66,
-   "tx_power_dbm": 12,
-   "address": "57289B52-2155-FB6F-8E53-8C6B06143FD5"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 33.0,
-   "proximity": "far",
-   "rssi_dbm": -66,
-   "tx_power_dbm": 12,
-   "address": "9D33A1FB-5348-FF1E-5B70-F656486981D9"
+   "address": "0BB6C0D7-47CB-FA13-D3BB-7A1C43EAC04F"
   },
   {
    "manufacturer": "Apple",
    "type": "item tracker (Find My)",
-   "distance_yards": 2.1,
+   "distance_yards": 1.7,
    "proximity": "near",
-   "rssi_dbm": -66,
+   "rssi_dbm": -64,
    "tx_power_dbm": null,
-   "address": "7ECADBCE-4CBC-6C57-6B29-D15A6D0AF382"
+   "address": "AFA13BC8-5E56-15CB-BCDB-DBDCC8BCE000"
   },
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 2.3,
+   "type": "item tracker (Find My)",
+   "distance_yards": 1.7,
    "proximity": "near",
-   "rssi_dbm": -67,
+   "rssi_dbm": -64,
    "tx_power_dbm": null,
-   "address": "6129A617-F44A-E87F-7827-B498A28B6D85"
+   "address": "AA09C3BF-CADA-DA48-58CA-C534CB8E9C8B"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 27.5,
+   "proximity": "far",
+   "rssi_dbm": -64,
+   "tx_power_dbm": 12,
+   "address": "83A1FC82-73BD-C64A-3216-39B49AF16730"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 19.0,
+   "proximity": "far",
+   "rssi_dbm": -64,
+   "tx_power_dbm": 8,
+   "address": "1C356738-C320-F368-F81D-6C49BA3F587C"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 1.9,
+   "proximity": "near",
+   "rssi_dbm": -65,
+   "tx_power_dbm": null,
+   "address": "D1E82956-5DC4-08FD-057B-E5A40BEA3719"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 30.1,
+   "proximity": "far",
+   "rssi_dbm": -65,
+   "tx_power_dbm": 12,
+   "address": "03EFF3D3-4501-7020-B760-AEA9E5A1C94B"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 1.9,
+   "proximity": "near",
+   "rssi_dbm": -65,
+   "tx_power_dbm": null,
+   "address": "88EC105D-2B3A-8DF6-9427-DC7E3A94CD7F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 1.9,
+   "proximity": "near",
+   "rssi_dbm": -65,
+   "tx_power_dbm": null,
+   "address": "6B25BA2D-9F7B-FF72-54A7-673773E2D135"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
    "distance_yards": 25.1,
    "proximity": "far",
-   "rssi_dbm": -67,
+   "rssi_dbm": -65,
+   "tx_power_dbm": 10,
+   "address": "7584C19C-D20B-2D95-8659-60B1CB01D33F"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 10.0,
+   "proximity": "medium",
+   "rssi_dbm": -65,
+   "tx_power_dbm": 0,
+   "address": "B12B08DB-254D-0B50-54B5-0AC54DD76F20"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 1.9,
+   "proximity": "near",
+   "rssi_dbm": -65,
+   "tx_power_dbm": null,
+   "address": "2F361692-314A-C282-4E7C-85AADEE084D9"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 1.9,
+   "proximity": "near",
+   "rssi_dbm": -65,
+   "tx_power_dbm": null,
+   "address": "9251920A-47ED-FA1E-6C2B-0A85D1D3B26D"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 33.0,
+   "proximity": "far",
+   "rssi_dbm": -66,
+   "tx_power_dbm": 12,
+   "address": "EE05CBC3-D576-F736-622F-04736989919F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 2.1,
+   "proximity": "near",
+   "rssi_dbm": -66,
+   "tx_power_dbm": null,
+   "address": "F21A3789-1A4E-7E90-39C7-F581FC7FA190"
+  },
+  {
+   "manufacturer": "unknown (0x4703)",
+   "type": "headphones",
+   "distance_yards": 2.1,
+   "proximity": "near",
+   "rssi_dbm": -66,
+   "tx_power_dbm": null,
+   "address": "5D9F9810-F77A-A157-5781-D87DE96C81B2"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -66,
    "tx_power_dbm": 8,
-   "address": "50BD2CEA-1BCD-28F1-C1C1-5B5067AC8EAC"
+   "address": "5A3F0FE0-6780-891D-A881-C2577B805B25"
   },
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 36.2,
+   "proximity": "far",
+   "rssi_dbm": -67,
+   "tx_power_dbm": 12,
+   "address": "8C265E9E-BA6F-2342-DA30-595F7E1511B3"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
    "distance_yards": 2.3,
    "proximity": "near",
    "rssi_dbm": -67,
    "tx_power_dbm": null,
-   "address": "BFB0D5D6-50E3-F72E-464B-5CD2D1C9AA91"
+   "address": "77C7E507-BD9D-D8E9-D353-BF9C733CD351"
   },
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 36.2,
+   "proximity": "far",
+   "rssi_dbm": -67,
+   "tx_power_dbm": 12,
+   "address": "0D7BC350-E5A9-67E5-44F3-DDD2746F55BB"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 57.4,
+   "proximity": "far",
+   "rssi_dbm": -67,
+   "tx_power_dbm": 17,
+   "address": "0E97850D-9C06-433C-C809-B122778F4192"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
    "distance_yards": 2.3,
    "proximity": "near",
    "rssi_dbm": -67,
    "tx_power_dbm": null,
-   "address": "5D739444-59D9-D8F4-5A45-908A77DE13F0"
+   "address": "0E31E8F4-BD88-BF68-9E78-04689A2549D7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 2.3,
+   "proximity": "near",
+   "rssi_dbm": -67,
+   "tx_power_dbm": null,
+   "address": "9AE9AC97-3255-7681-CAF1-591FAB9A5F8B"
   },
   {
    "manufacturer": "Apple",
@@ -675,25 +747,70 @@
    "proximity": "near",
    "rssi_dbm": -67,
    "tx_power_dbm": null,
-   "address": "3A234DFE-E503-D5D0-A7C0-26FCBC4DF344"
+   "address": "AF4AF644-7B6D-6A3B-F91E-110B419813A5"
   },
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
+   "type": "headphones/earbuds (AirPods family)",
    "distance_yards": 2.3,
    "proximity": "near",
    "rssi_dbm": -67,
    "tx_power_dbm": null,
-   "address": "D963548F-2C9D-3F71-FD7C-15F4126C4BE4"
+   "address": "78646EA6-4CB6-09BA-0876-E60CA221A49C"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 39.7,
+   "distance_yards": 36.2,
    "proximity": "far",
-   "rssi_dbm": -68,
+   "rssi_dbm": -67,
    "tx_power_dbm": 12,
-   "address": "FC148FD9-E2DB-AAA6-A1AA-60843F203618"
+   "address": "FB610C2D-88E0-C82D-15BD-EC531A0E0B5C"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 2.3,
+   "proximity": "near",
+   "rssi_dbm": -67,
+   "tx_power_dbm": null,
+   "address": "639B798A-E06D-7380-3886-4A169AF749B8"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 2.3,
+   "proximity": "near",
+   "rssi_dbm": -67,
+   "tx_power_dbm": null,
+   "address": "7FF08B54-DFD8-1375-7D60-8864D48E8F6A"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 2.5,
+   "proximity": "near",
+   "rssi_dbm": -68,
+   "tx_power_dbm": null,
+   "address": "37999EF7-60F6-A22D-1B32-E1678651E1E4"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 2.5,
+   "proximity": "near",
+   "rssi_dbm": -68,
+   "tx_power_dbm": null,
+   "address": "FC26BAD8-4C28-8AB6-9FD4-89513CBA1A6A"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 2.5,
+   "proximity": "near",
+   "rssi_dbm": -68,
+   "tx_power_dbm": null,
+   "address": "D3579917-070C-3546-573E-9B41A62993F7"
   },
   {
    "manufacturer": "Apple",
@@ -702,133 +819,79 @@
    "proximity": "far",
    "rssi_dbm": -68,
    "tx_power_dbm": 0,
-   "address": "3DBEF879-5BE0-6EF0-CBAE-CFB5BA18926A"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 36.2,
-   "proximity": "far",
-   "rssi_dbm": -68,
-   "tx_power_dbm": 11,
-   "address": "787C13A5-A450-3FAB-FADD-DC74B74723B7"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "heart-rate sensor",
-   "distance_yards": 2.7,
-   "proximity": "near",
-   "rssi_dbm": -69,
-   "tx_power_dbm": null,
-   "address": "11AD35CC-E0E9-CAEC-65AE-89E24F5A9841"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 2.7,
-   "proximity": "near",
-   "rssi_dbm": -69,
-   "tx_power_dbm": null,
-   "address": "EA305EFB-A46E-B537-429D-B2A7A2FF6950"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 2.7,
-   "proximity": "near",
-   "rssi_dbm": -69,
-   "tx_power_dbm": null,
-   "address": "1E6A95F5-2247-F7CC-829B-52968A2356BA"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 2.7,
-   "proximity": "near",
-   "rssi_dbm": -69,
-   "tx_power_dbm": null,
-   "address": "4B11D03D-2841-002E-9D92-05670DC34BF4"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 2.7,
-   "proximity": "near",
-   "rssi_dbm": -69,
-   "tx_power_dbm": null,
-   "address": "3F52755B-097D-A65F-C050-776F4C8F7EB8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 69.0,
-   "proximity": "far",
-   "rssi_dbm": -69,
-   "tx_power_dbm": 17,
-   "address": "0ADE2D37-B43D-4062-8D48-630EE19F90B1"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 14.4,
-   "proximity": "far",
-   "rssi_dbm": -69,
-   "tx_power_dbm": 0,
-   "address": "F1CAEF67-5F65-C581-AE74-690E77742E24"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 3.0,
-   "proximity": "medium",
-   "rssi_dbm": -70,
-   "tx_power_dbm": null,
-   "address": "BFF68464-5025-03E1-5704-78A4131E4AA8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 47.7,
-   "proximity": "far",
-   "rssi_dbm": -70,
-   "tx_power_dbm": 12,
-   "address": "E745CC1D-CF19-9411-9065-D8BE2228186C"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 3.0,
-   "proximity": "medium",
-   "rssi_dbm": -70,
-   "tx_power_dbm": null,
-   "address": "7E5EC123-7AEF-35E4-3B82-1B8BFD62E633"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 3.0,
-   "proximity": "medium",
-   "rssi_dbm": -70,
-   "tx_power_dbm": null,
-   "address": "62FC0927-3B4C-6A74-9272-7603DA90463B"
+   "address": "9253A184-FBE2-3B0B-EF7A-A548E66983E1"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
    "distance_yards": 39.7,
    "proximity": "far",
-   "rssi_dbm": -70,
-   "tx_power_dbm": 10,
-   "address": "7584C19C-D20B-2D95-8659-60B1CB01D33F"
+   "rssi_dbm": -68,
+   "tx_power_dbm": 12,
+   "address": "4C52387D-E4DF-92E2-D6D4-346291EC513F"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
    "distance_yards": 47.7,
    "proximity": "far",
-   "rssi_dbm": -70,
+   "rssi_dbm": -68,
+   "tx_power_dbm": 14,
+   "address": "B4044843-D6F5-D4DC-14C6-6A1A37D627B0"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 2.7,
+   "proximity": "near",
+   "rssi_dbm": -69,
+   "tx_power_dbm": null,
+   "address": "6B076801-69A2-40EF-FD47-E16ADE13103A"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 43.5,
+   "proximity": "far",
+   "rssi_dbm": -69,
    "tx_power_dbm": 12,
-   "address": "727AF52C-5AE8-05C1-82A1-F97434098E10"
+   "address": "A280C8FA-1B9E-4D7A-6141-02B5C705642F"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 2.7,
+   "proximity": "near",
+   "rssi_dbm": -69,
+   "tx_power_dbm": null,
+   "address": "C268F4BF-F0EB-4FE8-84D9-31AD32D02602"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 2.7,
+   "proximity": "near",
+   "rssi_dbm": -69,
+   "tx_power_dbm": null,
+   "address": "F0F2B05A-8397-A51C-73D2-73B4FFDEA3FF"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 30.1,
+   "proximity": "far",
+   "rssi_dbm": -69,
+   "tx_power_dbm": 8,
+   "address": "F2F89961-28E6-F7FC-C5E2-371470351475"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 2.7,
+   "proximity": "near",
+   "rssi_dbm": -69,
+   "tx_power_dbm": null,
+   "address": "F92B5020-35FB-474C-AD1A-00A6B1B95B75"
   },
   {
    "manufacturer": "Apple",
@@ -837,34 +900,115 @@
    "proximity": "medium",
    "rssi_dbm": -70,
    "tx_power_dbm": null,
-   "address": "561A277B-7A96-BC3E-4322-FAB9F31F0897"
+   "address": "4CD82D29-DAA0-384C-0350-66C08F41B2AB"
   },
   {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 52.3,
-   "proximity": "far",
-   "rssi_dbm": -71,
-   "tx_power_dbm": 12,
-   "address": "62F9A371-E26C-4636-4CC0-B010066F20B2"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 52.3,
-   "proximity": "far",
-   "rssi_dbm": -71,
-   "tx_power_dbm": 12,
-   "address": "4BE771FC-804A-6BF1-CE74-C61B1507570C"
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "C8AA7BD7-267B-CD81-93BB-A2E49412CFD9"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "73166C5F-8F14-CB43-5A3F-B911448B2CF7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "A226F280-7D50-8131-9587-61420AC34DFB"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "DB951328-6916-F536-FF5C-1DA1A5F8D71C"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 43.5,
+   "proximity": "far",
+   "rssi_dbm": -70,
+   "tx_power_dbm": 11,
+   "address": "CF09FC91-7839-AD72-5A0D-495712A34D66"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "54CD1655-1174-EEF3-7003-4A6DCA1F315D"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "ABD030FB-C39E-713B-BD15-B205554CECC1"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 47.7,
+   "proximity": "far",
+   "rssi_dbm": -70,
+   "tx_power_dbm": 12,
+   "address": "B7D5DCC4-D92C-C9F1-6A27-E42CBCF8DB17"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "DC99ACF5-DE76-7D01-75EB-54A38C2C173C"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "334B3376-3F12-ED8D-A914-6ABBE4F722CA"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 3.0,
+   "proximity": "medium",
+   "rssi_dbm": -70,
+   "tx_power_dbm": null,
+   "address": "110F102F-A8F0-EB84-4D69-083FEA47FADC"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
    "distance_yards": 3.3,
    "proximity": "medium",
    "rssi_dbm": -71,
    "tx_power_dbm": null,
-   "address": "79AA756C-A7FC-EC72-2AD9-55120ECB3D88"
+   "address": "581B3A87-C69B-8DE2-4389-CFF91970F383"
   },
   {
    "manufacturer": "Apple",
@@ -873,16 +1017,25 @@
    "proximity": "far",
    "rssi_dbm": -71,
    "tx_power_dbm": 0,
-   "address": "C62DC63F-38B6-CCE8-D0D7-CBD93FBD4BF2"
+   "address": "EF3D5F7C-DAE7-16C7-4E12-43BF2DEA0B01"
   },
   {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 3.3,
-   "proximity": "medium",
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 17.3,
+   "proximity": "far",
    "rssi_dbm": -71,
-   "tx_power_dbm": null,
-   "address": "9538813C-E5AD-869A-F082-BF49C25D806D"
+   "tx_power_dbm": 0,
+   "address": "0250BFE5-E1BA-F47A-35E5-E8CA56AD2D7A"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 47.7,
+   "proximity": "far",
+   "rssi_dbm": -71,
+   "tx_power_dbm": 11,
+   "address": "3B5A52B3-E71F-2F24-6103-DE47F4FEC6D7"
   },
   {
    "manufacturer": "Apple",
@@ -891,133 +1044,61 @@
    "proximity": "far",
    "rssi_dbm": -71,
    "tx_power_dbm": 12,
-   "address": "A136C17C-873F-94C1-48D1-F6DCA3EFBC94"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 52.3,
-   "proximity": "far",
-   "rssi_dbm": -71,
-   "tx_power_dbm": 12,
-   "address": "C4B22849-8A17-6B9E-8C25-E94DE25D8482"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 57.4,
-   "proximity": "far",
-   "rssi_dbm": -71,
-   "tx_power_dbm": 13,
-   "address": "21D94D32-01E5-E4D7-7F7C-725DAE0558F2"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 57.4,
-   "proximity": "far",
-   "rssi_dbm": -71,
-   "tx_power_dbm": 13,
-   "address": "32DB568F-A224-14CB-04BE-B2E390C212F4"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 3.3,
-   "proximity": "medium",
-   "rssi_dbm": -71,
-   "tx_power_dbm": null,
-   "address": "0EEDA755-2C4B-CB7C-AC6E-1B88647257DE"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 39.7,
-   "proximity": "far",
-   "rssi_dbm": -72,
-   "tx_power_dbm": 8,
-   "address": "E061D742-864C-A571-1F5D-F2882ECFF19D"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 57.4,
-   "proximity": "far",
-   "rssi_dbm": -72,
-   "tx_power_dbm": 12,
-   "address": "D0C07387-F2D7-E591-79C2-209336736A86"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 3.6,
-   "proximity": "medium",
-   "rssi_dbm": -72,
-   "tx_power_dbm": null,
-   "address": "59CB6072-1364-6F84-7275-A98976093A1B"
-  },
-  {
-   "manufacturer": "unknown (0x4703)",
-   "type": "headphones",
-   "distance_yards": 3.6,
-   "proximity": "medium",
-   "rssi_dbm": -72,
-   "tx_power_dbm": null,
-   "address": "989E0D06-069A-B076-F3FD-61B633E76080"
+   "address": "7B36D6F0-2927-4AD4-4336-202CB27F5F20"
   },
   {
    "manufacturer": "Apple",
    "type": "speaker or TV (AirPlay)",
+   "distance_yards": 3.3,
+   "proximity": "medium",
+   "rssi_dbm": -71,
+   "tx_power_dbm": null,
+   "address": "9D520F85-5C70-EEEC-BFFE-9B6D6FDDA467"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 57.4,
+   "proximity": "far",
+   "rssi_dbm": -72,
+   "tx_power_dbm": 12,
+   "address": "36BC41A6-4C66-61FB-BEFC-64409E7A4204"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 57.4,
+   "proximity": "far",
+   "rssi_dbm": -72,
+   "tx_power_dbm": 12,
+   "address": "729C0149-985E-4BCF-998C-D2251BB0CDE5"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
    "distance_yards": 3.6,
    "proximity": "medium",
    "rssi_dbm": -72,
    "tx_power_dbm": null,
-   "address": "E553F004-40C3-72BE-5A29-2D233EFD1516"
+   "address": "E3AD60B2-371E-484E-6908-670B32459BFA"
   },
   {
-   "manufacturer": "unknown",
-   "type": "unknown",
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 57.4,
+   "proximity": "far",
+   "rssi_dbm": -72,
+   "tx_power_dbm": 12,
+   "address": "C12D0046-3A2F-5EBD-F567-D8E271B81044"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
    "distance_yards": 19.0,
    "proximity": "far",
    "rssi_dbm": -72,
    "tx_power_dbm": 0,
-   "address": "E508A95F-822A-6CE0-EC05-B8ACF13C1193"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 3.6,
-   "proximity": "medium",
-   "rssi_dbm": -72,
-   "tx_power_dbm": null,
-   "address": "EAF75EF8-8611-F103-DD3F-DEDD388E99E3"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 57.4,
-   "proximity": "far",
-   "rssi_dbm": -72,
-   "tx_power_dbm": 12,
-   "address": "D13593B0-0952-8A55-296B-00E3E3F2B79E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 3.6,
-   "proximity": "medium",
-   "rssi_dbm": -72,
-   "tx_power_dbm": null,
-   "address": "1F96BCAD-403D-0E32-E3E9-522CD575548D"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 3.6,
-   "proximity": "medium",
-   "rssi_dbm": -72,
-   "tx_power_dbm": null,
-   "address": "6888E3AC-C8B1-E99A-01C1-17B5B9E596A1"
+   "address": "24316EE4-5403-F398-3A52-1EEDD3E86FEA"
   },
   {
    "manufacturer": "Apple",
@@ -1026,79 +1107,61 @@
    "proximity": "far",
    "rssi_dbm": -73,
    "tx_power_dbm": 12,
-   "address": "79B1B110-253E-9C2D-1E11-45A30B37B315"
+   "address": "3A318BD5-72FE-6165-3459-BA21AC929352"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 4.0,
+   "proximity": "medium",
+   "rssi_dbm": -73,
+   "tx_power_dbm": null,
+   "address": "FAC6E8CA-B925-57BC-36FE-C7C3191ED4F8"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 4.0,
+   "proximity": "medium",
+   "rssi_dbm": -73,
+   "tx_power_dbm": null,
+   "address": "64291965-6F39-A381-B1C0-B0AD1C703741"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 62.9,
+   "proximity": "far",
+   "rssi_dbm": -73,
+   "tx_power_dbm": 12,
+   "address": "E9A62079-72ED-6151-12D3-A6D92FD68DE7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -74,
+   "tx_power_dbm": 0,
+   "address": "DA3DAC4F-62AB-CF74-C902-88B25FC93EDE"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 4.0,
-   "proximity": "medium",
-   "rssi_dbm": -73,
-   "tx_power_dbm": null,
-   "address": "796D356C-0284-4B92-4716-E8001DDB0A67"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 4.0,
-   "proximity": "medium",
-   "rssi_dbm": -73,
-   "tx_power_dbm": null,
-   "address": "5F313F70-F3A8-5BE6-A824-D15186058A73"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 62.9,
-   "proximity": "far",
-   "rssi_dbm": -73,
-   "tx_power_dbm": 12,
-   "address": "B01EDEB8-37E1-07AC-1951-E24BBFC526B4"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 4.0,
-   "proximity": "medium",
-   "rssi_dbm": -73,
-   "tx_power_dbm": null,
-   "address": "A9A1B8FD-C9B8-A18F-A257-E57042F3DA14"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 4.0,
-   "proximity": "medium",
-   "rssi_dbm": -73,
-   "tx_power_dbm": null,
-   "address": "66FFCCC2-325D-FCD1-A73F-ED8CF8C0AC82"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 62.9,
-   "proximity": "far",
-   "rssi_dbm": -73,
-   "tx_power_dbm": 12,
-   "address": "9C0D0FB4-146E-8C72-E6B4-4620732155EA"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 20.8,
-   "proximity": "far",
-   "rssi_dbm": -73,
-   "tx_power_dbm": 0,
-   "address": "DDBF9AC6-8B8E-AD0B-F686-F6EF47EF2DF9"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
    "distance_yards": 4.4,
    "proximity": "medium",
    "rssi_dbm": -74,
    "tx_power_dbm": null,
-   "address": "4FD310EF-53CE-2497-76D5-5409C89C37F6"
+   "address": "3551BA33-B559-0C7A-D3A6-4F3F84E8CF54"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -74,
+   "tx_power_dbm": 0,
+   "address": "26160E6B-7927-8E33-1778-0D70CB30ED42"
   },
   {
    "manufacturer": "Apple",
@@ -1107,34 +1170,34 @@
    "proximity": "far",
    "rssi_dbm": -74,
    "tx_power_dbm": 12,
-   "address": "A4E1413C-6714-1B05-146F-B0B761D95E43"
+   "address": "CE33C652-D5E9-C959-F013-9F9100225E61"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 69.0,
+   "distance_yards": 109.4,
    "proximity": "far",
    "rssi_dbm": -74,
+   "tx_power_dbm": 17,
+   "address": "95964F20-7B36-C63E-731C-0CF03831BE8F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 75.7,
+   "proximity": "far",
+   "rssi_dbm": -75,
    "tx_power_dbm": 12,
-   "address": "40377637-7474-7DA0-1316-0139D95FE5F3"
+   "address": "50936593-719D-E4E8-E8D6-708EEB891E9F"
   },
   {
-   "manufacturer": "Apple",
-   "type": "Apple device",
+   "manufacturer": "Microsoft",
+   "type": "unknown",
    "distance_yards": 4.8,
    "proximity": "medium",
    "rssi_dbm": -75,
    "tx_power_dbm": null,
-   "address": "F05E7CA2-03BA-EA44-24DA-AC4DB8C30D59"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 4.8,
-   "proximity": "medium",
-   "rssi_dbm": -75,
-   "tx_power_dbm": null,
-   "address": "F6CE1F5B-EF25-764D-D629-EB6F1E723952"
+   "address": "6FB01411-FEE8-5EF2-9909-11BEAAB32232"
   },
   {
    "manufacturer": "Apple",
@@ -1143,7 +1206,16 @@
    "proximity": "medium",
    "rssi_dbm": -75,
    "tx_power_dbm": null,
-   "address": "91CD5594-460C-A106-F2A8-FF46CC765696"
+   "address": "987BBF82-8AE3-F335-57E4-62E6006998B0"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 4.8,
+   "proximity": "medium",
+   "rssi_dbm": -75,
+   "tx_power_dbm": null,
+   "address": "A7FB8AF7-145B-2FC0-596B-3497C987C073"
   },
   {
    "manufacturer": "Apple",
@@ -1152,43 +1224,52 @@
    "proximity": "medium",
    "rssi_dbm": -75,
    "tx_power_dbm": null,
-   "address": "B2DD81CB-14F3-F4FB-3FBA-3F2EF9F0052E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 75.7,
-   "proximity": "far",
-   "rssi_dbm": -75,
-   "tx_power_dbm": 12,
-   "address": "8DADD600-1108-55A8-B8D1-795C9FF7DB3D"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 75.7,
-   "proximity": "far",
-   "rssi_dbm": -75,
-   "tx_power_dbm": 12,
-   "address": "734CCE91-DDF6-7813-F047-4CC292EF167F"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 27.5,
-   "proximity": "far",
-   "rssi_dbm": -76,
-   "tx_power_dbm": 0,
-   "address": "A16D3DB7-859B-2854-8BB4-42C3666A7B6C"
+   "address": "AEC84249-7A62-075C-4390-4E5103704160"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
+   "distance_yards": 4.8,
+   "proximity": "medium",
+   "rssi_dbm": -75,
+   "tx_power_dbm": null,
+   "address": "D6545BC8-FBEF-71A1-6650-46DA6CF65224"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 4.8,
+   "proximity": "medium",
+   "rssi_dbm": -75,
+   "tx_power_dbm": null,
+   "address": "44D906C9-EE14-47FA-1C71-527351AB6C62"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 25.1,
+   "proximity": "far",
+   "rssi_dbm": -75,
+   "tx_power_dbm": 0,
+   "address": "B193C4F0-9F46-41C9-67E0-6170196A053E"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 4.8,
+   "proximity": "medium",
+   "rssi_dbm": -75,
+   "tx_power_dbm": null,
+   "address": "7D477B1C-DA52-831E-8CFA-CB6B4CCD3983"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
    "distance_yards": 5.2,
    "proximity": "medium",
    "rssi_dbm": -76,
    "tx_power_dbm": null,
-   "address": "F20A71D0-967E-D255-AF7C-AA96D7706D7B"
+   "address": "8E799A7F-30DE-7F84-23CC-30FF4DEBD698"
   },
   {
    "manufacturer": "Microsoft",
@@ -1197,7 +1278,16 @@
    "proximity": "medium",
    "rssi_dbm": -76,
    "tx_power_dbm": null,
-   "address": "B614B91E-D3B7-55F4-4715-0C3D41931592"
+   "address": "170DFD98-6943-1654-B69F-2ABCCBD8D584"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 5.2,
+   "proximity": "medium",
+   "rssi_dbm": -76,
+   "tx_power_dbm": null,
+   "address": "20DAEFB2-4C8E-B4E0-3FAA-0E948E11E5EE"
   },
   {
    "manufacturer": "Apple",
@@ -1206,7 +1296,34 @@
    "proximity": "far",
    "rssi_dbm": -76,
    "tx_power_dbm": 12,
-   "address": "9BF81123-69AB-35AD-E7E2-4DBD00533FD5"
+   "address": "EF40382C-9770-4FF2-5F37-74422618F7D4"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 5.2,
+   "proximity": "medium",
+   "rssi_dbm": -76,
+   "tx_power_dbm": null,
+   "address": "95DFBED7-9B53-2DF5-155E-FB4604D04454"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 83.0,
+   "proximity": "far",
+   "rssi_dbm": -76,
+   "tx_power_dbm": 12,
+   "address": "4A80CE49-D0DD-5E9B-9A15-B7294F879DD6"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 5.2,
+   "proximity": "medium",
+   "rssi_dbm": -76,
+   "tx_power_dbm": null,
+   "address": "4C4EC17F-8C08-36ED-4848-0FE960464286"
   },
   {
    "manufacturer": "Apple",
@@ -1215,34 +1332,7 @@
    "proximity": "far",
    "rssi_dbm": -76,
    "tx_power_dbm": 0,
-   "address": "914310F0-859B-024A-6027-F0B8627C264A"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 27.5,
-   "proximity": "far",
-   "rssi_dbm": -76,
-   "tx_power_dbm": 0,
-   "address": "B20F17EF-890D-5B66-E164-B3E330D48F21"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 5.2,
-   "proximity": "medium",
-   "rssi_dbm": -76,
-   "tx_power_dbm": null,
-   "address": "F361F1B2-1680-D596-06C3-CEF8A330217B"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 5.2,
-   "proximity": "medium",
-   "rssi_dbm": -76,
-   "tx_power_dbm": null,
-   "address": "D65E5D48-0A20-AB8E-F834-DB41198D8CBF"
+   "address": "B8E68B0D-89EC-0752-2941-0ADF8AC77E72"
   },
   {
    "manufacturer": "Apple",
@@ -1251,124 +1341,124 @@
    "proximity": "medium",
    "rssi_dbm": -77,
    "tx_power_dbm": null,
-   "address": "F316B6E0-28D1-9F77-A467-3C8078286F5D"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 5.7,
-   "proximity": "medium",
-   "rssi_dbm": -77,
-   "tx_power_dbm": null,
-   "address": "83AC93E4-199A-CB6F-7105-71DEEDD352E7"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 5.7,
-   "proximity": "medium",
-   "rssi_dbm": -77,
-   "tx_power_dbm": null,
-   "address": "77433880-9251-6237-4C98-505107CED5A7"
+   "address": "7E92DC8A-7AD2-4F9C-15DF-0EF12A74D6A3"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 91.0,
+   "distance_yards": 83.0,
    "proximity": "far",
    "rssi_dbm": -77,
-   "tx_power_dbm": 12,
-   "address": "62A1E497-E7F5-859F-D025-A7CF65E90D3D"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 6.3,
-   "proximity": "medium",
-   "rssi_dbm": -78,
-   "tx_power_dbm": null,
-   "address": "46EA9BE5-4F48-010F-D185-781C2FB321A1"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 33.0,
-   "proximity": "far",
-   "rssi_dbm": -78,
-   "tx_power_dbm": 0,
-   "address": "CC1E3696-D576-6EDA-5133-7A5D3D36160B"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 6.3,
-   "proximity": "medium",
-   "rssi_dbm": -78,
-   "tx_power_dbm": null,
-   "address": "4F4B51DA-6566-1157-FEF0-E38E582F0174"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 91.0,
-   "proximity": "far",
-   "rssi_dbm": -78,
    "tx_power_dbm": 11,
-   "address": "5A05D7D4-F86E-86D2-DC71-F747F1B141F7"
+   "address": "F43AABAC-8216-0465-7976-41EF75B6AFB5"
   },
   {
-   "manufacturer": "unknown",
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 5.7,
+   "proximity": "medium",
+   "rssi_dbm": -77,
+   "tx_power_dbm": null,
+   "address": "812F76DF-4B12-484E-1273-68F9D6E901C3"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 5.7,
+   "proximity": "medium",
+   "rssi_dbm": -77,
+   "tx_power_dbm": null,
+   "address": "0589E7D1-E1E7-4EFB-9B6D-8319AC723E05"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 62.9,
+   "proximity": "far",
+   "rssi_dbm": -77,
+   "tx_power_dbm": 8,
+   "address": "75C6BC7F-B07D-CD46-C389-07E2531E47A0"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 6.3,
+   "proximity": "medium",
+   "rssi_dbm": -78,
+   "tx_power_dbm": null,
+   "address": "3DE21F09-32AA-7EC1-E595-A941A7B0762E"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 6.3,
+   "proximity": "medium",
+   "rssi_dbm": -78,
+   "tx_power_dbm": null,
+   "address": "E562A7F8-CAD2-7F7B-B65B-5280DE9AC58A"
+  },
+  {
+   "manufacturer": "Microsoft",
    "type": "unknown",
    "distance_yards": 6.3,
    "proximity": "medium",
    "rssi_dbm": -78,
    "tx_power_dbm": null,
-   "address": "15CD4CCA-A964-61CA-61CA-F6894208DA1D"
+   "address": "0AB8DBB0-BB8E-FC6F-7253-5BD4FDF950D9"
   },
   {
    "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
+   "type": "speaker or TV (AirPlay)",
    "distance_yards": 6.3,
    "proximity": "medium",
    "rssi_dbm": -78,
    "tx_power_dbm": null,
-   "address": "D0D8F815-DC8F-1D9D-C781-C3BB5938ACF8"
-  },
-  {
-   "manufacturer": "unknown (0x0106)",
-   "type": "watch",
-   "distance_yards": 6.9,
-   "proximity": "medium",
-   "rssi_dbm": -79,
-   "tx_power_dbm": null,
-   "address": "CC103FCE-46DD-8F92-2161-1F0D398DF306"
+   "address": "797E45A7-F2D8-E705-B314-E4D4578BA275"
   },
   {
    "manufacturer": "Apple",
-   "type": "headphones/earbuds (AirPods family)",
-   "distance_yards": 6.9,
-   "proximity": "medium",
-   "rssi_dbm": -79,
-   "tx_power_dbm": null,
-   "address": "F533B3F6-685C-A58D-28B3-225983B10311"
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 158.1,
+   "proximity": "far",
+   "rssi_dbm": -78,
+   "tx_power_dbm": 17,
+   "address": "EB2362D9-4C65-F845-9B98-395BAB244EF2"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
    "distance_yards": 99.7,
    "proximity": "far",
-   "rssi_dbm": -79,
-   "tx_power_dbm": 11,
-   "address": "6F927164-B753-A8C5-BE6D-A0715DD3A6B8"
+   "rssi_dbm": -78,
+   "tx_power_dbm": 12,
+   "address": "9E9DA1F6-D500-CBB1-BB30-1C59FBD3CF72"
   },
   {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
+   "manufacturer": "Microsoft",
+   "type": "unknown",
    "distance_yards": 6.9,
    "proximity": "medium",
    "rssi_dbm": -79,
    "tx_power_dbm": null,
-   "address": "2FAC48B5-B1F0-CF90-FADE-2D176F470F1A"
+   "address": "1845C899-F7ED-12DA-1C61-1E261F6AC096"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 6.9,
+   "proximity": "medium",
+   "rssi_dbm": -79,
+   "tx_power_dbm": null,
+   "address": "15CD4CCA-A964-61CA-61CA-F6894208DA1D"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 6.9,
+   "proximity": "medium",
+   "rssi_dbm": -79,
+   "tx_power_dbm": null,
+   "address": "15136ABF-EC29-49EA-14D6-E57CC277879B"
   },
   {
    "manufacturer": "Apple",
@@ -1377,43 +1467,25 @@
    "proximity": "far",
    "rssi_dbm": -79,
    "tx_power_dbm": 0,
-   "address": "1375632E-EE92-2211-B7F9-445A5F6B10B4"
+   "address": "9CA77A96-E696-2F83-7022-33F13B0AB13D"
   },
   {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 6.9,
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 7.6,
    "proximity": "medium",
-   "rssi_dbm": -79,
+   "rssi_dbm": -80,
    "tx_power_dbm": null,
-   "address": "2C05EBE2-1DFD-7757-E591-F2EC3A70E5A2"
+   "address": "70E38EA8-263E-C421-0249-DE40245FC369"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 99.7,
+   "distance_yards": 109.4,
    "proximity": "far",
-   "rssi_dbm": -79,
+   "rssi_dbm": -80,
    "tx_power_dbm": 11,
-   "address": "11A7D5F5-145C-9D4B-CB1D-82B61B0889E6"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
-   "proximity": "far",
-   "rssi_dbm": -80,
-   "tx_power_dbm": 14,
-   "address": "64AF26BF-BED9-A904-AE8A-3EB9668711E5"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 83.0,
-   "proximity": "far",
-   "rssi_dbm": -80,
-   "tx_power_dbm": 8,
-   "address": "02AFB4C6-8E32-B2D8-29FA-25B19FF95536"
+   "address": "AC6ACCB5-6301-3473-056D-270B4E4B97A6"
   },
   {
    "manufacturer": "Apple",
@@ -1422,16 +1494,52 @@
    "proximity": "far",
    "rssi_dbm": -80,
    "tx_power_dbm": 12,
-   "address": "9D127EF5-8096-AEB0-2284-C2BC40BA3711"
+   "address": "7BEDA3D5-3CB1-BFCC-D4B2-F6B1F533F3D8"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 7.6,
+   "proximity": "medium",
+   "rssi_dbm": -80,
+   "tx_power_dbm": null,
+   "address": "98712217-A441-CC05-0485-EBB28C021729"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 131.5,
+   "distance_yards": 119.9,
+   "proximity": "far",
+   "rssi_dbm": -80,
+   "tx_power_dbm": 12,
+   "address": "A86BB341-6892-4378-9A7B-311843ABF64F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 7.6,
+   "proximity": "medium",
+   "rssi_dbm": -80,
+   "tx_power_dbm": null,
+   "address": "2FBA8680-C34F-A18F-E1C7-C5785BA9FF55"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 43.5,
    "proximity": "far",
    "rssi_dbm": -81,
-   "tx_power_dbm": 12,
-   "address": "8DC405E1-3047-D6A4-1215-8C8D75E0A76C"
+   "tx_power_dbm": 0,
+   "address": "72BB318F-4589-2C84-EE5E-1D66EE6E902F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 8.3,
+   "proximity": "medium",
+   "rssi_dbm": -81,
+   "tx_power_dbm": null,
+   "address": "FC1361A4-9A16-A5DC-24DB-C6A396A4765D"
   },
   {
    "manufacturer": "Apple",
@@ -1440,34 +1548,43 @@
    "proximity": "medium",
    "rssi_dbm": -81,
    "tx_power_dbm": null,
-   "address": "77CF2491-67F5-AB4D-3CCC-83EEF9C7A49B"
+   "address": "84CF63BF-EED0-C0AE-DA81-5F8587AA44DB"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 8.3,
+   "proximity": "medium",
+   "rssi_dbm": -81,
+   "tx_power_dbm": null,
+   "address": "25B5A223-4283-4F4B-3C26-6F2C7B71ED02"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 9.1,
+   "distance_yards": 8.3,
    "proximity": "medium",
-   "rssi_dbm": -82,
+   "rssi_dbm": -81,
    "tx_power_dbm": null,
-   "address": "7637856A-02F0-FD80-254D-D20CF0C740F8"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 9.1,
-   "proximity": "medium",
-   "rssi_dbm": -82,
-   "tx_power_dbm": null,
-   "address": "4715BA27-38FB-F877-D02B-612F989108C7"
+   "address": "1AE12275-EEC4-34BE-15F6-15F963575A30"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
+   "distance_yards": 131.5,
    "proximity": "far",
-   "rssi_dbm": -82,
+   "rssi_dbm": -81,
    "tx_power_dbm": 12,
-   "address": "F0C97601-9E36-D85E-9DCB-BF43BF50277A"
+   "address": "EAB127BD-DB15-8EFC-D2C4-E36CF008BFFF"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 131.5,
+   "proximity": "far",
+   "rssi_dbm": -81,
+   "tx_power_dbm": 12,
+   "address": "601564DE-93E7-3280-6825-886EC1D20873"
   },
   {
    "manufacturer": "Apple",
@@ -1476,16 +1593,16 @@
    "proximity": "medium",
    "rssi_dbm": -82,
    "tx_power_dbm": null,
-   "address": "F11475E0-9DA5-DACF-A057-B70B793A4DE2"
+   "address": "83325BAA-3EEA-6D3F-7C71-321F30985105"
   },
   {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
    "distance_yards": 9.1,
    "proximity": "medium",
    "rssi_dbm": -82,
    "tx_power_dbm": null,
-   "address": "FD34B007-6625-3C8C-2BD6-FACBFE94D44D"
+   "address": "2D26F9FA-AA88-4E40-E64B-8AFC056BE9A4"
   },
   {
    "manufacturer": "Apple",
@@ -1494,43 +1611,7 @@
    "proximity": "medium",
    "rssi_dbm": -82,
    "tx_power_dbm": null,
-   "address": "28EE2B07-56F9-68C4-81AB-F0D22A488BCA"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
-   "proximity": "far",
-   "rssi_dbm": -82,
-   "tx_power_dbm": 12,
-   "address": "5DCD057F-36FA-924F-1376-0CCDD9F30DB8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 9.1,
-   "proximity": "medium",
-   "rssi_dbm": -82,
-   "tx_power_dbm": null,
-   "address": "0C682F5B-5BA1-A9D6-C963-4C8DAD69E5C8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
-   "proximity": "far",
-   "rssi_dbm": -82,
-   "tx_power_dbm": 12,
-   "address": "5DC8886F-9019-ED43-0F16-8D1A333768C8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
-   "proximity": "far",
-   "rssi_dbm": -82,
-   "tx_power_dbm": 12,
-   "address": "A3192372-9BB7-4B3C-E4D6-889A42941F59"
+   "address": "3C7B2C39-09F3-9C15-BE0C-768B19BC54F8"
   },
   {
    "manufacturer": "Apple",
@@ -1539,7 +1620,25 @@
    "proximity": "medium",
    "rssi_dbm": -82,
    "tx_power_dbm": null,
-   "address": "449388E7-DEF4-F545-08A2-65EA58047834"
+   "address": "28A227E9-473F-2F12-A298-E928E0F218F4"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 9.1,
+   "proximity": "medium",
+   "rssi_dbm": -82,
+   "tx_power_dbm": null,
+   "address": "C690A2C2-F2D0-EC08-5BFB-B550856C086B"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 144.2,
+   "proximity": "far",
+   "rssi_dbm": -82,
+   "tx_power_dbm": 12,
+   "address": "AA2F2810-E157-9CDC-DD33-B598D6D59C8B"
   },
   {
    "manufacturer": "Apple",
@@ -1548,16 +1647,16 @@
    "proximity": "medium",
    "rssi_dbm": -83,
    "tx_power_dbm": null,
-   "address": "820482D8-A409-5BB1-37F3-DB4524B4DB5C"
+   "address": "70CCB4EF-D175-AAD1-FA12-22C9442F644D"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 250.5,
-   "proximity": "far",
+   "type": "Apple device",
+   "distance_yards": 10.0,
+   "proximity": "medium",
    "rssi_dbm": -83,
-   "tx_power_dbm": 17,
-   "address": "76E4E36C-9E1E-1047-105A-F180CDB0ABD0"
+   "tx_power_dbm": null,
+   "address": "845D6CD6-0115-2C8A-A182-9D3333816940"
   },
   {
    "manufacturer": "Apple",
@@ -1566,7 +1665,7 @@
    "proximity": "medium",
    "rssi_dbm": -83,
    "tx_power_dbm": null,
-   "address": "978E9CA0-D7BF-6017-B9AC-6462F987C892"
+   "address": "8A9B26DC-4336-A3B9-61F0-4B9647D9F77A"
   },
   {
    "manufacturer": "Apple",
@@ -1575,52 +1674,52 @@
    "proximity": "far",
    "rssi_dbm": -83,
    "tx_power_dbm": 12,
-   "address": "D4EF6F0E-7546-427E-B841-E0E746DE2302"
+   "address": "D986ADCB-9020-AC64-AD49-8707EC47285F"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 52.3,
+   "distance_yards": 158.1,
    "proximity": "far",
    "rssi_dbm": -83,
-   "tx_power_dbm": 0,
-   "address": "A04A255C-E9B7-F9C8-7D78-FFBE4F63E773"
+   "tx_power_dbm": 12,
+   "address": "798C944D-61C7-2464-4BEE-54422A6EBD11"
   },
   {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 10.0,
-   "proximity": "medium",
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 158.1,
+   "proximity": "far",
    "rssi_dbm": -83,
-   "tx_power_dbm": null,
-   "address": "AC7DA570-BBC3-04A8-58ED-51A7D952ADE2"
+   "tx_power_dbm": 12,
+   "address": "6DE3F588-7044-71BE-E28C-BF52300E8FDF"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 274.7,
+   "proximity": "far",
+   "rssi_dbm": -84,
+   "tx_power_dbm": 17,
+   "address": "23D592BE-3026-88B1-3112-6716945C713C"
   },
   {
    "manufacturer": "Apple",
    "type": "item tracker (Find My)",
-   "distance_yards": 10.0,
-   "proximity": "medium",
-   "rssi_dbm": -83,
+   "distance_yards": 10.9,
+   "proximity": "far",
+   "rssi_dbm": -84,
    "tx_power_dbm": null,
-   "address": "B1F2F928-F739-7CB8-A778-767AD02137C3"
+   "address": "E1969D80-8630-EF2B-41B9-539FC6F21495"
   },
   {
    "manufacturer": "Microsoft",
    "type": "unknown",
-   "distance_yards": 10.0,
-   "proximity": "medium",
-   "rssi_dbm": -83,
+   "distance_yards": 10.9,
+   "proximity": "far",
+   "rssi_dbm": -84,
    "tx_power_dbm": null,
-   "address": "A3CAFA62-9D11-C86E-EB65-73B00AA8F017"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 10.0,
-   "proximity": "medium",
-   "rssi_dbm": -83,
-   "tx_power_dbm": null,
-   "address": "AC8A8D6C-BA3E-1AE0-890F-AADBC988E097"
+   "address": "B59B510F-3156-ED80-CC71-0EA1C7E3B908"
   },
   {
    "manufacturer": "Apple",
@@ -1629,25 +1728,16 @@
    "proximity": "far",
    "rssi_dbm": -84,
    "tx_power_dbm": 0,
-   "address": "21DDDADA-08EC-D74E-3A39-03F0AF6FB3BF"
-  },
-  {
-   "manufacturer": "Garmin",
-   "type": "unknown",
-   "distance_yards": 10.9,
-   "proximity": "far",
-   "rssi_dbm": -84,
-   "tx_power_dbm": null,
-   "address": "2C925B21-1D2F-3D8A-C768-8412F3D7DD82"
+   "address": "37BFB6CB-C442-195D-AE68-A6050B2AFDC2"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 173.3,
+   "distance_yards": 119.9,
    "proximity": "far",
    "rssi_dbm": -84,
-   "tx_power_dbm": 12,
-   "address": "FF7B2BA8-A9F8-C5C5-C221-6DCFA674E290"
+   "tx_power_dbm": 8,
+   "address": "6E296B28-20B4-A481-B1F8-8C5B9A911A41"
   },
   {
    "manufacturer": "Apple",
@@ -1656,25 +1746,25 @@
    "proximity": "far",
    "rssi_dbm": -84,
    "tx_power_dbm": null,
-   "address": "1596FE85-FF6F-88ED-739F-91108F71542C"
+   "address": "13624926-9277-BEC9-CFEE-B1E0D7EA4C09"
   },
   {
    "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 10.9,
-   "proximity": "far",
-   "rssi_dbm": -84,
-   "tx_power_dbm": null,
-   "address": "71715530-5C55-0D3D-6E92-412E60C14F00"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
+   "type": "Apple device",
    "distance_yards": 12.0,
    "proximity": "far",
    "rssi_dbm": -85,
    "tx_power_dbm": null,
-   "address": "FF478051-33A9-58F1-A806-46043D2C2877"
+   "address": "3035EA24-BA3A-5B48-54AE-34BEA69E10F7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 12.0,
+   "proximity": "far",
+   "rssi_dbm": -85,
+   "tx_power_dbm": null,
+   "address": "7CA1DDB6-9610-465B-2246-88185A8EE4E4"
   },
   {
    "manufacturer": "Microsoft",
@@ -1683,7 +1773,16 @@
    "proximity": "far",
    "rssi_dbm": -85,
    "tx_power_dbm": null,
-   "address": "9148A282-0F08-74C1-8236-46E4B327116F"
+   "address": "A835AB13-9A51-AE37-A38A-147BC38AD1FA"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 12.0,
+   "proximity": "far",
+   "rssi_dbm": -85,
+   "tx_power_dbm": null,
+   "address": "AE08EB5D-D686-4C91-DE7D-8E9C81CD0790"
   },
   {
    "manufacturer": "Apple",
@@ -1692,205 +1791,133 @@
    "proximity": "far",
    "rssi_dbm": -85,
    "tx_power_dbm": 12,
-   "address": "B996B227-4F04-F446-D44E-ABFA60B3F5E4"
+   "address": "99702ABE-4E84-E3AE-94BA-CE1D2AEF8AE7"
   },
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
+   "type": "item tracker (Find My)",
    "distance_yards": 12.0,
    "proximity": "far",
    "rssi_dbm": -85,
    "tx_power_dbm": null,
-   "address": "02578D40-3CA7-3040-ECD8-572260AA482D"
+   "address": "3DFD95E4-617D-68CA-74EC-D14FB6F0407A"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 12.0,
+   "distance_yards": 13.1,
    "proximity": "far",
-   "rssi_dbm": -85,
+   "rssi_dbm": -86,
    "tx_power_dbm": null,
-   "address": "FA94FBE7-4BCD-F9F3-4EAA-CCCE7B45D950"
+   "address": "2C591D82-E87F-9114-B972-67E8DC091417"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 62.9,
+   "distance_yards": 208.4,
    "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": 0,
-   "address": "43EEE5B8-92B6-013F-E46C-794759305691"
+   "rssi_dbm": -86,
+   "tx_power_dbm": 12,
+   "address": "34247D2E-2BE2-17AC-BB00-FCEB33CFA130"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 13.1,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": null,
+   "address": "2803EFD9-4D6C-74D6-8CCC-BB34DE0F9307"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device",
+   "distance_yards": 13.1,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": null,
+   "address": "90C53864-9001-BCBE-8FB2-8CD7F31CB839"
+  },
+  {
+   "manufacturer": "Samsung",
+   "type": "unknown",
+   "distance_yards": 13.1,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": null,
+   "address": "9AB66F94-B717-CD2E-D4D6-F07700319938"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 119.9,
+   "distance_yards": 131.5,
    "proximity": "far",
-   "rssi_dbm": -85,
+   "rssi_dbm": -86,
    "tx_power_dbm": 7,
-   "address": "2AD90A30-D9C4-735F-C277-FC9FA2343376"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 62.9,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": 0,
-   "address": "B6CBACE6-BE19-29CD-BB6B-23E3C680BBFB"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 62.9,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": 0,
-   "address": "2D7561C8-C361-6965-CCF7-1341B011C566"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 12.0,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": null,
-   "address": "914052F0-639B-D8AD-90EF-F39B7964124E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 12.0,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": null,
-   "address": "680A0932-CEEE-A237-33C0-A57E98EEF97C"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 12.0,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": null,
-   "address": "B0E97FE5-B3D7-B25E-6B86-6D9A14C9E5D9"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 12.0,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": null,
-   "address": "040820BE-70CC-609B-65D3-C4DBF390A7A1"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 62.9,
-   "proximity": "far",
-   "rssi_dbm": -85,
-   "tx_power_dbm": 0,
-   "address": "7FEA1741-F127-3B9D-806E-52E067D256E5"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": 8,
-   "address": "E14501BA-B82A-A08F-F423-650C623B7D52"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 330.3,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": 17,
-   "address": "3516C3F1-97E6-6ACA-7697-D9E3F6DC3FFF"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 13.1,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": null,
-   "address": "CDF28AA4-7561-98E0-6ACA-DE8FA1759B4D"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": 8,
-   "address": "13456437-0CBA-4CA4-167E-D0C27C0526E7"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 13.1,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": null,
-   "address": "FEAFD5F1-3304-1BE1-C6F8-B0DFE953A5BB"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 13.1,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": null,
-   "address": "75B767D2-D757-62A7-A04B-6B0CE49FF88C"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 69.0,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": 0,
-   "address": "6593B1CE-F570-719C-A794-5C6001EA56EF"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 13.1,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": null,
-   "address": "FCA26362-5290-7886-05C7-5C1617C25669"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 13.1,
-   "proximity": "far",
-   "rssi_dbm": -86,
-   "tx_power_dbm": null,
-   "address": "9AD8F7E3-C1F4-FA29-0C81-42A1F595A62F"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 14.4,
-   "proximity": "far",
-   "rssi_dbm": -87,
-   "tx_power_dbm": null,
-   "address": "443BBB16-9E29-6D97-42F3-A5656C9A3799"
+   "address": "0AD786A9-C292-8C9C-F0A6-8F27AEEFCF77"
   },
   {
    "manufacturer": "Microsoft",
    "type": "unknown",
+   "distance_yards": 13.1,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": null,
+   "address": "94612404-C4ED-A9D1-4DB1-15BC50AC87F4"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 13.1,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": null,
+   "address": "C1027283-40D7-6827-3BDB-A83E6FA400E7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 13.1,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": null,
+   "address": "3A0E804A-ABCF-254E-CF1B-E515BC5AF5D9"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 131.5,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": 7,
+   "address": "9B14908A-E045-B037-B0BC-53BDB944BF36"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 208.4,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": 12,
+   "address": "B556A187-388A-39F1-7462-1CE1107F64E7"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 208.4,
+   "proximity": "far",
+   "rssi_dbm": -86,
+   "tx_power_dbm": 12,
+   "address": "2FD5D551-8052-C0B8-619D-FB850ECD121D"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
    "distance_yards": 14.4,
    "proximity": "far",
    "rssi_dbm": -87,
    "tx_power_dbm": null,
-   "address": "A249AC13-ABE9-3159-CE08-D88A078DAABA"
+   "address": "9ACE3928-7B1A-1125-BD49-15B720AE9074"
   },
   {
    "manufacturer": "Apple",
@@ -1899,7 +1926,7 @@
    "proximity": "far",
    "rssi_dbm": -87,
    "tx_power_dbm": 9,
-   "address": "736DB760-1827-5605-FAAD-2EF802A1F312"
+   "address": "CE735F8C-B506-6D88-BC65-A7AFF88E5AD0"
   },
   {
    "manufacturer": "Apple",
@@ -1908,25 +1935,25 @@
    "proximity": "far",
    "rssi_dbm": -87,
    "tx_power_dbm": 12,
-   "address": "93EBEAE5-3A42-5886-5276-69BB5C4F5B81"
+   "address": "8F599F9F-5393-500C-FB92-53E2016A9DE4"
   },
   {
    "manufacturer": "Apple",
-   "type": "headphones/earbuds (AirPods family)",
+   "type": "speaker or TV (AirPlay)",
    "distance_yards": 14.4,
    "proximity": "far",
    "rssi_dbm": -87,
    "tx_power_dbm": null,
-   "address": "F2B68D30-3662-FCD8-B913-1902C7D9C635"
+   "address": "776A46AC-2E44-3EEF-54ED-294BD484C67B"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
+   "distance_yards": 158.1,
    "proximity": "far",
    "rssi_dbm": -87,
-   "tx_power_dbm": 7,
-   "address": "71F722A5-9ADE-8F31-58C2-50EBD11CFDFC"
+   "tx_power_dbm": 8,
+   "address": "2DD91323-4001-4071-2C13-D39EFCB32768"
   },
   {
    "manufacturer": "Apple",
@@ -1935,88 +1962,16 @@
    "proximity": "far",
    "rssi_dbm": -87,
    "tx_power_dbm": 9,
-   "address": "5E8A8F9D-70D5-562B-C911-B0DFEDB1B5BB"
+   "address": "3D73B904-8B9B-7814-45E9-8055A124DB6D"
   },
   {
    "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 14.4,
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 362.1,
    "proximity": "far",
    "rssi_dbm": -87,
-   "tx_power_dbm": null,
-   "address": "6C3432EE-5957-E313-4373-36B7F0DFE2FE"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 397.1,
-   "proximity": "far",
-   "rssi_dbm": -88,
    "tx_power_dbm": 17,
-   "address": "FD8833E1-5D8D-1A8C-9350-1B7D03AEF742"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 15.8,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": null,
-   "address": "19280A11-95AB-2C74-4638-7BFFFEDF1FEA"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 15.8,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": null,
-   "address": "F2C21F23-785C-2FB6-37DA-E95B2C179D64"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 250.5,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": 12,
-   "address": "EACC3861-937C-6EBD-8724-D6CA4BC803AC"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 250.5,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": 12,
-   "address": "CF018E3F-FAEE-3BA3-2661-336B0D195EFD"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 15.8,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": null,
-   "address": "9FBE5263-8C94-DFA8-AE32-AE77DF63A159"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 250.5,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": 12,
-   "address": "97E7B41E-0328-C69F-A271-89CFB379B148"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 250.5,
-   "proximity": "far",
-   "rssi_dbm": -88,
-   "tx_power_dbm": 12,
-   "address": "BF46231E-A2DE-F094-60DD-6A44B4EE9457"
+   "address": "38802A7F-F26F-046B-8D5E-93A9D4C8A9FB"
   },
   {
    "manufacturer": "unknown",
@@ -2025,34 +1980,79 @@
    "proximity": "far",
    "rssi_dbm": -88,
    "tx_power_dbm": null,
-   "address": "9628104B-3B12-D3F4-701D-619CA751E48A"
+   "address": "8ABF1592-88E4-90F1-F20C-57112FAA523C"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 208.4,
+   "type": "speaker or TV (AirPlay)",
+   "distance_yards": 15.8,
    "proximity": "far",
-   "rssi_dbm": -89,
-   "tx_power_dbm": 9,
-   "address": "111FF391-3F3D-C0C5-FACA-22ADAFDBF766"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 17.3,
-   "proximity": "far",
-   "rssi_dbm": -89,
+   "rssi_dbm": -88,
    "tx_power_dbm": null,
-   "address": "9084D25E-EAC4-9F2E-9317-375B03CB7014"
+   "address": "257B0A9A-9959-9973-911E-96B6A2ECFC89"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 250.5,
+   "distance_yards": 228.5,
    "proximity": "far",
-   "rssi_dbm": -89,
+   "rssi_dbm": -88,
    "tx_power_dbm": 11,
-   "address": "8CD1E885-D3C2-6D30-4D7F-CAC7DDCFBD98"
+   "address": "835F8E92-17EA-D04B-F18D-0CAE4AB4815E"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "headphones/earbuds (AirPods family)",
+   "distance_yards": 15.8,
+   "proximity": "far",
+   "rssi_dbm": -88,
+   "tx_power_dbm": null,
+   "address": "D5DB6D3E-267F-6B51-5581-B1D01CAB33B4"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 362.1,
+   "proximity": "far",
+   "rssi_dbm": -88,
+   "tx_power_dbm": 16,
+   "address": "45FE6851-4C55-5F0E-2C7F-D95D2B82188F"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 15.8,
+   "proximity": "far",
+   "rssi_dbm": -88,
+   "tx_power_dbm": null,
+   "address": "C1E3D5F7-177F-B6D9-4F96-EB6FFB298DB6"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 83.0,
+   "proximity": "far",
+   "rssi_dbm": -88,
+   "tx_power_dbm": 0,
+   "address": "9D839CB0-5312-6C40-58E8-62C886240326"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 274.7,
+   "proximity": "far",
+   "rssi_dbm": -89,
+   "tx_power_dbm": 12,
+   "address": "E159F809-9791-B810-E4BE-2DB1ADC89F96"
+  },
+  {
+   "manufacturer": "unknown (0x0106)",
+   "type": "watch",
+   "distance_yards": 17.3,
+   "proximity": "far",
+   "rssi_dbm": -89,
+   "tx_power_dbm": null,
+   "address": "CC103FCE-46DD-8F92-2161-1F0D398DF306"
   },
   {
    "manufacturer": "Apple",
@@ -2061,7 +2061,7 @@
    "proximity": "far",
    "rssi_dbm": -89,
    "tx_power_dbm": null,
-   "address": "8F89F6A7-4C69-1C68-EFEA-59605706AC5D"
+   "address": "97B73215-2A45-1740-A0E4-8353AFB7F94A"
   },
   {
    "manufacturer": "Apple",
@@ -2070,25 +2070,34 @@
    "proximity": "far",
    "rssi_dbm": -90,
    "tx_power_dbm": 12,
-   "address": "6583D3A0-259E-44A9-7C5A-A34A83B8689D"
+   "address": "9116C519-A1B4-3313-26B8-4E8838EF26C0"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 301.2,
+   "proximity": "far",
+   "rssi_dbm": -90,
+   "tx_power_dbm": 12,
+   "address": "E05F4150-6352-39A8-3456-529401227AED"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 19.0,
-   "proximity": "far",
-   "rssi_dbm": -90,
-   "tx_power_dbm": null,
-   "address": "32E9279E-BE2F-E029-B394-BD9BB3EBC7A8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
    "distance_yards": 301.2,
    "proximity": "far",
    "rssi_dbm": -90,
    "tx_power_dbm": 12,
-   "address": "92BF1824-9684-7CA5-6533-6D54BF14B3BE"
+   "address": "EF75A28F-F47C-C744-CC8A-B7AEEC41B1EB"
+  },
+  {
+   "manufacturer": "Samsung",
+   "type": "unknown",
+   "distance_yards": 19.0,
+   "proximity": "far",
+   "rssi_dbm": -90,
+   "tx_power_dbm": null,
+   "address": "58A87CE2-1949-80B0-74AA-2451130168C6"
   },
   {
    "manufacturer": "Microsoft",
@@ -2097,16 +2106,7 @@
    "proximity": "far",
    "rssi_dbm": -90,
    "tx_power_dbm": null,
-   "address": "CE087590-27CB-7DF3-7466-8C699661093B"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 19.0,
-   "proximity": "far",
-   "rssi_dbm": -90,
-   "tx_power_dbm": null,
-   "address": "0E58F7EB-12BF-1E42-D734-0AC280F09CDC"
+   "address": "2452817C-7029-2F32-C891-C0DB76FF2936"
   },
   {
    "manufacturer": "Apple",
@@ -2115,61 +2115,7 @@
    "proximity": "far",
    "rssi_dbm": -90,
    "tx_power_dbm": 12,
-   "address": "D6A200D3-3898-9B67-28CA-06C3352ACB14"
-  },
-  {
-   "manufacturer": "unknown (0xFEC5)",
-   "type": "unknown",
-   "distance_yards": 19.0,
-   "proximity": "far",
-   "rssi_dbm": -90,
-   "tx_power_dbm": null,
-   "address": "C2F2DA85-AA1B-096A-9D2C-CC2821223F70"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 19.0,
-   "proximity": "far",
-   "rssi_dbm": -90,
-   "tx_power_dbm": null,
-   "address": "CC5CD6A1-53E7-DBEC-A74E-199346853290"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 19.0,
-   "proximity": "far",
-   "rssi_dbm": -90,
-   "tx_power_dbm": null,
-   "address": "DB4F59B8-4A31-4FD0-0629-BA5B0B805B55"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 19.0,
-   "proximity": "far",
-   "rssi_dbm": -90,
-   "tx_power_dbm": null,
-   "address": "0A572CDE-15AE-0F8D-085F-8921CD6A54FB"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device",
-   "distance_yards": 20.8,
-   "proximity": "far",
-   "rssi_dbm": -91,
-   "tx_power_dbm": null,
-   "address": "01E1848C-D750-C471-C87D-807762604671"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 20.8,
-   "proximity": "far",
-   "rssi_dbm": -91,
-   "tx_power_dbm": null,
-   "address": "3876118C-370B-C253-C4D0-3712A52E853B"
+   "address": "A6CCA793-6C98-6D83-53BA-E4EB4E9496DF"
   },
   {
    "manufacturer": "Apple",
@@ -2178,7 +2124,7 @@
    "proximity": "far",
    "rssi_dbm": -91,
    "tx_power_dbm": 12,
-   "address": "B19D87AE-495E-C066-FCC5-7536676B7CAC"
+   "address": "BD184FE3-33E5-DF97-07D3-DEBF85C57014"
   },
   {
    "manufacturer": "Samsung",
@@ -2187,25 +2133,34 @@
    "proximity": "far",
    "rssi_dbm": -91,
    "tx_power_dbm": null,
-   "address": "5EF22EF9-55F6-4518-F816-C82DDE26B7BE"
+   "address": "9D19850A-493B-40C7-56FA-251C59B2C805"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 20.8,
+   "proximity": "far",
+   "rssi_dbm": -91,
+   "tx_power_dbm": null,
+   "address": "A1765A91-9638-15C0-B540-8D483D598163"
   },
   {
    "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 301.2,
+   "type": "Apple device",
+   "distance_yards": 20.8,
    "proximity": "far",
    "rssi_dbm": -91,
-   "tx_power_dbm": 11,
-   "address": "9AE22604-EC8E-114B-B98D-8F19C5B0004F"
+   "tx_power_dbm": null,
+   "address": "27AB961B-B0A0-CE6B-840E-E552FE485502"
   },
   {
    "manufacturer": "Apple",
    "type": "speaker or TV (AirPlay)",
-   "distance_yards": 22.8,
+   "distance_yards": 20.8,
    "proximity": "far",
-   "rssi_dbm": -92,
+   "rssi_dbm": -91,
    "tx_power_dbm": null,
-   "address": "DFEF29EC-1E3D-684C-3D24-768A5E7C66D8"
+   "address": "9E46ED27-1E93-5D5F-CF3B-B7E82A046C39"
   },
   {
    "manufacturer": "unknown",
@@ -2214,61 +2169,178 @@
    "proximity": "far",
    "rssi_dbm": -92,
    "tx_power_dbm": null,
-   "address": "2C73D09A-0C6B-B498-D211-8131F1537CF6"
+   "address": "880715FB-4A53-2E84-6AFA-3FD8DDD9E6D2"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 362.1,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 12,
+   "address": "3E16673E-B485-CC3C-BAD8-443A36AF0C63"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 362.1,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 12,
+   "address": "A0AD14A7-4051-B2BF-EF7B-EF34D4CF529E"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": null,
+   "address": "8E53B383-A560-946F-012F-7BF1F404A851"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 362.1,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 12,
+   "address": "F180E597-9751-FCBE-A9B6-F37CF0B75A49"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": null,
+   "address": "89747295-3DFD-44FD-3563-968F3093A995"
+  },
+  {
+   "manufacturer": "unknown",
+   "type": "unknown",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": null,
+   "address": "858E2372-C04B-21FB-F93B-56094F2820DD"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 362.1,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 12,
+   "address": "C411D5A8-94AA-BDFC-D6A7-31F79D57C886"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 119.9,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 0,
+   "address": "B24D2E6C-3EDD-75AA-CD73-B1CF550DD7FA"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 477.4,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 15,
+   "address": "0A9CCD30-3F5A-0B30-A197-6BF456C5476A"
+  },
+  {
+   "manufacturer": "Microsoft",
+   "type": "unknown",
+   "distance_yards": 22.8,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": null,
+   "address": "A7738D29-A836-3561-1F59-D47CB6463B7F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 330.3,
+   "proximity": "far",
+   "rssi_dbm": -92,
+   "tx_power_dbm": 11,
+   "address": "8F48F551-D8FB-0909-D8B8-6040989455F2"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 397.1,
+   "proximity": "far",
+   "rssi_dbm": -93,
+   "tx_power_dbm": 12,
+   "address": "D8E675BA-D951-204F-1213-4C668FAB5A80"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 131.5,
+   "proximity": "far",
+   "rssi_dbm": -93,
+   "tx_power_dbm": 0,
+   "address": "B2E4BB7D-F33E-94E9-6A60-8085506E430F"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 25.1,
+   "proximity": "far",
+   "rssi_dbm": -93,
+   "tx_power_dbm": null,
+   "address": "DFA9BF61-F068-EE47-FBB1-F54364378C5B"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 397.1,
+   "proximity": "far",
+   "rssi_dbm": -93,
+   "tx_power_dbm": 12,
+   "address": "682C51A8-6ABA-02B0-C9D7-7166B09ED663"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 25.1,
+   "proximity": "far",
+   "rssi_dbm": -93,
+   "tx_power_dbm": null,
+   "address": "9A609264-9E69-5CB0-2AD6-836E88BD9E15"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 22.8,
-   "proximity": "far",
-   "rssi_dbm": -92,
-   "tx_power_dbm": null,
-   "address": "2D0E23B0-A42B-06A2-BCFC-0799F943500A"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 362.1,
-   "proximity": "far",
-   "rssi_dbm": -92,
-   "tx_power_dbm": 12,
-   "address": "DADB0FD4-9516-FBB5-E618-FDD4C92E6DF4"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 362.1,
-   "proximity": "far",
-   "rssi_dbm": -92,
-   "tx_power_dbm": 12,
-   "address": "E3FFF431-FB1B-305F-889D-8CAE0C8F1D7F"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
-   "distance_yards": 22.8,
-   "proximity": "far",
-   "rssi_dbm": -92,
-   "tx_power_dbm": null,
-   "address": "D2786486-29BD-753B-5BC1-56EAC3304D78"
-  },
-  {
-   "manufacturer": "Microsoft",
-   "type": "unknown",
    "distance_yards": 27.5,
    "proximity": "far",
    "rssi_dbm": -94,
    "tx_power_dbm": null,
-   "address": "E568CE4C-14F7-EEB9-FE03-091CFC68660A"
+   "address": "D7552117-BA14-75D0-708D-7E0213246BB2"
   },
   {
    "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 27.5,
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 330.3,
    "proximity": "far",
    "rssi_dbm": -94,
-   "tx_power_dbm": null,
-   "address": "CA67A1A4-A7C6-0CB0-A8D0-E448074D4A90"
+   "tx_power_dbm": 9,
+   "address": "E35C1321-6295-E567-8DA6-FA7438C08DC2"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 690.0,
+   "proximity": "far",
+   "rssi_dbm": -94,
+   "tx_power_dbm": 17,
+   "address": "C97EE125-FA40-9845-B613-D868BA93B4AE"
   },
   {
    "manufacturer": "Apple",
@@ -2277,133 +2349,52 @@
    "proximity": "far",
    "rssi_dbm": -94,
    "tx_power_dbm": 12,
-   "address": "47CF31BE-AF43-607D-352F-96EACCCB68EB"
+   "address": "D21C4A57-9C90-C569-085A-00B9225C2593"
   },
   {
-   "manufacturer": "Apple",
-   "type": "Apple device",
+   "manufacturer": "Samsung",
+   "type": "unknown",
    "distance_yards": 27.5,
    "proximity": "far",
    "rssi_dbm": -94,
    "tx_power_dbm": null,
-   "address": "6FE8BFE1-229F-E6C4-698A-0F30A209AE3B"
+   "address": "51681B29-10F9-715D-B665-2B41608BC9BE"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "item tracker (Find My)",
+   "distance_yards": 27.5,
+   "proximity": "far",
+   "rssi_dbm": -94,
+   "tx_power_dbm": null,
+   "address": "22B27EBF-A916-E24B-5ED8-5C85CC1B6BBB"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device (phone/Mac)",
-   "distance_yards": 144.2,
+   "distance_yards": 435.4,
    "proximity": "far",
    "rssi_dbm": -94,
+   "tx_power_dbm": 12,
+   "address": "A16730D7-5C08-9C17-C981-3A9A541E7C83"
+  },
+  {
+   "manufacturer": "Apple",
+   "type": "Apple device (phone/Mac)",
+   "distance_yards": 158.1,
+   "proximity": "far",
+   "rssi_dbm": -95,
    "tx_power_dbm": 0,
-   "address": "F4714894-44DB-20B4-6771-F91C5F1A6828"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 27.5,
-   "proximity": "far",
-   "rssi_dbm": -94,
-   "tx_power_dbm": null,
-   "address": "D3AF11B1-0027-E873-FC9E-814C53590AC4"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 397.1,
-   "proximity": "far",
-   "rssi_dbm": -94,
-   "tx_power_dbm": 11,
-   "address": "312DE8CB-047D-7183-EC19-1A3D126AB23E"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 477.4,
-   "proximity": "far",
-   "rssi_dbm": -95,
-   "tx_power_dbm": 12,
-   "address": "AF76F678-E1C7-D8FF-FD3A-193C1F58EC6A"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 30.1,
-   "proximity": "far",
-   "rssi_dbm": -95,
-   "tx_power_dbm": null,
-   "address": "AE18F342-4F30-E9C3-69D8-E5A8B20BC89F"
+   "address": "0BB81EBB-A079-A8D0-EE90-983957FAB9B2"
   },
   {
    "manufacturer": "Apple",
    "type": "Apple device",
-   "distance_yards": 30.1,
-   "proximity": "far",
-   "rssi_dbm": -95,
-   "tx_power_dbm": null,
-   "address": "DF34EE4A-E8D4-EB51-D720-727B353B6266"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 30.1,
-   "proximity": "far",
-   "rssi_dbm": -95,
-   "tx_power_dbm": null,
-   "address": "9636E508-CD9A-3BF8-F0A8-A84099F34FA8"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 523.4,
-   "proximity": "far",
-   "rssi_dbm": -96,
-   "tx_power_dbm": 12,
-   "address": "A751E0AC-5959-1DE9-8D85-B422B429E9EE"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
-   "distance_yards": 33.0,
-   "proximity": "far",
-   "rssi_dbm": -96,
-   "tx_power_dbm": null,
-   "address": "C3DBCE4E-3A0C-CF93-C9E4-9E548F7D6DFF"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 523.4,
-   "proximity": "far",
-   "rssi_dbm": -96,
-   "tx_power_dbm": 12,
-   "address": "729EEF28-3F76-0BBD-8D67-AD15E1235798"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "speaker or TV (AirPlay)",
-   "distance_yards": 33.0,
-   "proximity": "far",
-   "rssi_dbm": -96,
-   "tx_power_dbm": null,
-   "address": "42B383D7-596A-4389-A048-C0E634802DBF"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "item tracker (Find My)",
-   "distance_yards": 33.0,
-   "proximity": "far",
-   "rssi_dbm": -96,
-   "tx_power_dbm": null,
-   "address": "0B4517AF-EE2E-3A76-8B18-9D289A1B4039"
-  },
-  {
-   "manufacturer": "unknown",
-   "type": "unknown",
    "distance_yards": 36.2,
    "proximity": "far",
    "rssi_dbm": -97,
    "tx_power_dbm": null,
-   "address": "57BE4AF8-E40A-E9B3-BC45-A39F3BA7EAA2"
+   "address": "D9BC2FE5-69B3-F721-2EB7-AD88A25B86AD"
   },
   {
    "manufacturer": "Apple",
@@ -2412,16 +2403,7 @@
    "proximity": "far",
    "rssi_dbm": -98,
    "tx_power_dbm": 12,
-   "address": "1E0E9CF0-0195-540F-41B1-A24F4EBB0D56"
-  },
-  {
-   "manufacturer": "Apple",
-   "type": "Apple device (phone/Mac)",
-   "distance_yards": 997.4,
-   "proximity": "far",
-   "rssi_dbm": -98,
-   "tx_power_dbm": 17,
-   "address": "30C5F727-659F-D0E3-08D5-13A0F34984DD"
+   "address": "D7A68D85-00A8-CF9A-079A-66498CB81A00"
   }
  ]
 }
