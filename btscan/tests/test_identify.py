@@ -86,3 +86,18 @@ def test_apple_fallback():
 
 def test_unknown_type():
     assert guess_type(make_record()) == "unknown"
+
+
+def test_even_realities_manufacturer():
+    record = make_record(manufacturer_data={0x5245: b"S211GCBB"})
+    assert manufacturer_name(record) == "Even Realities"
+
+
+def test_even_glasses_name_hint():
+    record = make_record(name="Even G2_32_R_B87572")
+    assert guess_type(record) == "smart glasses"
+
+
+def test_generic_glasses_name_hint():
+    record = make_record(name="Ray-Ban Meta Glasses")
+    assert guess_type(record) == "smart glasses"

@@ -37,6 +37,7 @@ COMPANY_IDS = {
     0x02E5: "Espressif",
     0x038F: "Xiaomi",
     0x05A7: "Sonos",
+    0x5245: "Even Realities",  # unregistered ID, ASCII "RE"
 }
 
 
@@ -80,6 +81,9 @@ def within_radius(record: DeviceRecord, radius_yards: float) -> bool:
 # Heuristics checked in order: device name keywords, advertised service
 # UUIDs, then Apple manufacturer-data message type (first payload byte).
 NAME_HINTS = [
+    ("even g", "smart glasses"),  # Even Realities G1/G2; one device per temple
+    ("glasses", "smart glasses"),
+    ("spectacles", "smart glasses"),
     ("airpods", "headphones"),
     ("headphone", "headphones"),
     ("buds", "earbuds"),
