@@ -371,8 +371,60 @@ function wireTable() {
   });
 }
 
-// Replaced by Task 5.
-function drawRadar() {}
+const SVG_NS = "http://www.w3.org/2000/svg";
+const CX = 180, CY = 180, R_MAX = 150, OUTER = 165;
+
+function el(name, attrs, text) {
+  const n = document.createElementNS(SVG_NS, name);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  if (text !== undefined) n.textContent = text;
+  return n;
+}
+
+// Stable pseudo-angle from the address - deterministic, but meaningless: BLE
+// gives distance, never bearing. The caption under the plot says so.
+function angleFor(address) {
+  let h = 0;
+  for (let i = 0; i < address.length; i++) h = (h * 31 + address.charCodeAt(i)) % 3600;
+  return (h / 3600) * Math.PI * 2;
+}
+
+function drawRadar(devices) {
+  const svg = document.getElementById("radar");
+  svg.replaceChildren();
+  for (const ring of RADII) {
+    const r = (ring / 25) * R_MAX;
+    svg.appendChild(el("circle", { cx: CX, cy: CY, r, fill: "none", stroke: "#e0e0e0" }));
+    svg.appendChild(el("text", { x: CX + 3, y: CY - r + 11, fill: "#aaa",
+      "font-size": "9" }, `${ring} yd`));
+  }
+  svg.appendChild(el("circle", { cx: CX, cy: CY, r: OUTER, fill: "none",
+    stroke: "#e0e0e0", "stroke-dasharray": "3 3" }));
+  svg.appendChild(el("text", { x: CX + 3, y: CY - OUTER + 11, fill: "#aaa",
+    "font-size": "9" }, "25+ yd"));
+  svg.appendChild(el("circle", { cx: CX, cy: CY, r: 2, fill: "#999" }));
+
+  const fill = { near: "#1a7f37", medium: "#9a6700", far: "#bbb" };
+  for (const d of devices) {
+    const a = angleFor(d.address);
+    const r = d.distance_yards > 25 ? OUTER : (d.distance_yards / 25) * R_MAX;
+    const dot = el("circle", { cx: CX + Math.cos(a) * r, cy: CY + Math.sin(a) * r,
+      r: 5, fill: fill[d.proximity] || "#bbb", "fill-opacity": "0.75", class: "dev" });
+    dot.dataset.addr = d.address;
+    dot.addEventListener("mouseenter", () => highlight(d.address, true));
+    dot.addEventListener("mouseleave", () => highlight(d.address, false));
+    dot.appendChild(el("title", {},
+      `${d.manufacturer} \u00b7 ${d.type} \u00b7 ~${d.distance_yards} yd \u00b7 ${d.rssi_dbm} dBm`));
+    svg.appendChild(dot);
+  }
+}
+
+function highlight(address, on) {
+  const row = document.querySelector(`tr[data-addr="${CSS.escape(address)}"]`);
+  if (!row) return;
+  row.classList.toggle("hot", on);
+  if (on) row.scrollIntoView({ block: "nearest", behavior: "smooth" });
+}
 
 let loaded = false;
 
