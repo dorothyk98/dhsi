@@ -196,6 +196,160 @@ function renderMeta(shown) {
     `${count} · scanned ${SCAN.scanned_at}${age ? ` (${age})` : ""} (scanner's local time)`;
 }
 
+function applyFilters(devices, s) {
+  const q = s.search.trim().toLowerCase();
+  const names = new Set();
+  for (const key of s.makers) for (const n of MAKER_BUCKETS.get(key) || []) names.add(n);
+  return devices.filter((d) => {
+    if (s.radius !== null && d.distance_yards > s.radius) return false;
+    if (!s.proximity.has(d.proximity)) return false;
+    if (names.size && !names.has(d.manufacturer)) return false;
+    if (q && !`${d.manufacturer} ${d.type} ${d.address}`.toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function chip(label, count, pressed, onClick) {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "chip";
+  b.setAttribute("aria-pressed", String(pressed));
+  b.textContent = label;
+  if (count !== null) {
+    const n = document.createElement("span");
+    n.className = "n";
+    n.textContent = count;
+    b.appendChild(n);
+  }
+  b.addEventListener("click", () => { onClick(); render(); });
+  return b;
+}
+
+function buildControls() {
+  const radius = document.getElementById("radius");
+  radius.replaceChildren(...[...RADII, null].map((r) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = r === null ? "All" : `${r} yd`;
+    b.setAttribute("aria-pressed", String(state.radius === r));
+    b.addEventListener("click", () => { state.radius = r; render(); });
+    return b;
+  }));
+
+  const prox = document.getElementById("proximity");
+  prox.replaceChildren(...PROXIMITIES.map((pr) => chip(
+    pr, DEVICES.filter((d) => d.proximity === pr).length, state.proximity.has(pr),
+    () => state.proximity.has(pr) ? state.proximity.delete(pr) : state.proximity.add(pr))));
+
+  const makers = document.getElementById("makers");
+  makers.replaceChildren(...[...MAKER_BUCKETS.entries()].map(([key, names]) => chip(
+    key, DEVICES.filter((d) => names.includes(d.manufacturer)).length, state.makers.has(key),
+    () => state.makers.has(key) ? state.makers.delete(key) : state.makers.add(key))));
+
+  document.getElementById("search").addEventListener("input", (e) => {
+    state.search = e.target.value; render();
+  });
+  document.getElementById("group-toggle").addEventListener("click", () => {
+    state.groupByType = !state.groupByType;
+    if (state.groupByType) state.sort = null;
+    render();
+  });
+  document.getElementById("reset").addEventListener("click", () => {
+    state.search = ""; state.radius = null; state.proximity = new Set(PROXIMITIES);
+    state.makers = new Set(); state.sort = null; state.groupByType = true;
+    document.getElementById("search").value = "";
+    render();
+  });
+}
+
+function syncControls() {
+  [...document.getElementById("radius").children].forEach((b, i) => {
+    const r = i < RADII.length ? RADII[i] : null;
+    b.setAttribute("aria-pressed", String(state.radius === r));
+  });
+  [...document.getElementById("proximity").children].forEach((b, i) =>
+    b.setAttribute("aria-pressed", String(state.proximity.has(PROXIMITIES[i]))));
+  const keys = [...MAKER_BUCKETS.keys()];
+  [...document.getElementById("makers").children].forEach((b, i) =>
+    b.setAttribute("aria-pressed", String(state.makers.has(keys[i]))));
+  document.getElementById("group-toggle")
+    .setAttribute("aria-pressed", String(state.groupByType));
+}
+
+const COLUMNS = [
+  { key: "manufacturer", label: "Manufacturer" },
+  { key: "distance_yards", label: "Distance" },
+  { key: "proximity", label: "Proximity" },
+  { key: "rssi_dbm", label: "Signal (RSSI)" },
+  { key: "tx_power_dbm", label: "TX power" },
+  { key: "address", label: "Address" },
+];
+
+const esc = (v) => String(v).replace(/[&<>"]/g,
+  (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function rowHtml(d) {
+  const pct = Math.max(0, Math.min(1, (d.rssi_dbm - RSSI_MIN) / (RSSI_MAX - RSSI_MIN)));
+  return `<tr data-addr="${esc(d.address)}">
+    <td>${esc(d.manufacturer)}</td>
+    <td>~${d.distance_yards} yd</td>
+    <td class="${esc(d.proximity)}">${esc(d.proximity)}</td>
+    <td><span class="bar ${esc(d.proximity)}" style="width:${Math.round(pct * 60)}px"></span>${d.rssi_dbm} dBm</td>
+    <td>${d.tx_power_dbm ?? "\u2014"}</td>
+    <td><code>${esc(d.address.slice(0, 8))}\u2026</code></td>
+  </tr>`;
+}
+
+function tableHtml(devices) {
+  const heads = COLUMNS.map((c) => {
+    const active = state.sort && state.sort.key === c.key;
+    const arrow = active ? (state.sort.dir === "asc" ? " \u25b2" : " \u25bc") : "";
+    return `<th class="sortable" data-key="${c.key}">${c.label}<span class="arrow">${arrow}</span></th>`;
+  }).join("");
+  return `<table><thead><tr>${heads}</tr></thead>
+    <tbody>${devices.map(rowHtml).join("")}</tbody></table>`;
+}
+
+function render() {
+  syncControls();
+  const shown = applyFilters(DEVICES, state);
+  renderMeta(shown.length);
+  const results = document.getElementById("results");
+
+  if (!shown.length) {
+    results.innerHTML = `<div class="empty">No devices match these filters.</div>`;
+    drawRadar([]);
+    return;
+  }
+
+  if (state.groupByType) {
+    const groups = new Map();
+    for (const d of shown) {
+      if (!groups.has(d.type)) groups.set(d.type, []);
+      groups.get(d.type).push(d);
+    }
+    results.innerHTML = [...groups.entries()]
+      .sort((a, b) => b[1].length - a[1].length)
+      .map(([type, list]) => {
+        list.sort((a, b) => a.distance_yards - b.distance_yards);
+        return `<h3>${esc(type)} <span class="count">${list.length} device${
+          list.length === 1 ? "" : "s"}</span></h3>${tableHtml(list)}`;
+      }).join("");
+  } else {
+    results.innerHTML = tableHtml(sortDevices(shown, state.sort));
+  }
+
+  wireTable();
+  drawRadar(shown);
+}
+
+// Replaced by Task 4 (sortDevices, wireTable) and Task 5 (drawRadar).
+function sortDevices(devices) {
+  return devices.slice().sort((a, b) => a.distance_yards - b.distance_yards);
+}
+function wireTable() {}
+function drawRadar() {}
+
 let loaded = false;
 
 fetch("scan.json")
