@@ -1,40 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>btscan — Bluetooth Device Scanner</title>
-<style>
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, system-ui, sans-serif;
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 24px;
-    color: #222;
-    line-height: 1.5;
-  }
-  h1 { margin-bottom: 0; }
-  .subtitle { color: #666; margin-top: 4px; }
-  code, pre {
-    background: #f4f4f4;
-    border-radius: 4px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 0.9em;
-  }
-  code { padding: 1px 5px; }
-  pre { padding: 12px; overflow-x: auto; }
-  .caveats { background: #fff8e6; border: 1px solid #eedc9a; border-radius: 6px; padding: 12px 16px; }
-  table { border-collapse: collapse; width: 100%; margin-top: 12px; }
-  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; font-size: 0.9em; }
-  th { background: #f0f0f0; }
-  tr:nth-child(even) { background: #fafafa; }
-  .near { color: #1a7f37; font-weight: 600; }
-  .medium { color: #9a6700; }
-  .far { color: #888; }
-  #scan-meta { color: #666; }
-  #results h3 { margin: 22px 0 4px; }
-  #results h3 .count { color: #888; font-weight: normal; font-size: 0.85em; }
+# btscan Interactive Results Page — Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Turn `btscan/index.html` from a static dump of the published scan into a page you can filter, search, sort, and read at a glance.
+
+**Architecture:** One self-contained HTML file, inline CSS and JS, no frameworks and no build step. The script has three separated regions: a single `state` object, pure `(devices, state) -> devices` filter/sort functions, and renderers that repaint summary + radar + table. Every control mutates `state` and calls one `render()`.
+
+**Tech Stack:** Vanilla ES2020 in one file. Served by GitHub Pages as a static asset. No dependencies. Python scanner is untouched.
+
+**Testing note:** Node is not installed on this machine, so there is no JS unit-test runner and this plan is not TDD. Each task ends with a concrete browser check run against the real 41-device `btscan/scan.json` via a local server. The Python suite (`python -m pytest btscan/tests -v`, 13 tests) must keep passing but is not touched by any task.
+
+**Local server for every verification step:**
+
+```bash
+python3 -m http.server 8009
+```
+
+Then open `http://localhost:8009/btscan/`. Leave it running across all tasks.
+
+---
+
+## File Structure
+
+- Modify: `btscan/index.html` — the only file this plan changes. Its `<style>` grows a controls/radar/bar section; its `<script>` is replaced wholesale by the state/filter/render structure.
+
+No other file is created or modified. `scan.json`'s format is an input contract and does not change.
+
+---
+
+### Task 1: Page shell, controls markup, and CSS
+
+**Files:**
+- Modify: `btscan/index.html` (`<style>` block, and the `<h2>Latest published scan</h2>` section)
+
+- [ ] **Step 1: Add CSS for controls, chips, bars, radar, and empty state**
+
+Append inside the existing `<style>`, keeping the current rules untouched:
+
+```css
   .controls { background: #f9f9f9; border: 1px solid #e3e3e3; border-radius: 6px;
               padding: 14px 16px; margin-top: 12px; display: grid; gap: 12px; }
   .ctl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
@@ -58,9 +61,8 @@
   th.sortable:hover { background: #e6e6e6; }
   th .arrow { color: #888; font-size: 0.8em; }
   .bar { display: inline-block; height: 8px; border-radius: 2px; vertical-align: middle;
-         min-width: 2px; margin-right: 6px; }
-  .bar.near { background: #1a7f37; }
-  .bar.medium { background: #9a6700; }
+         min-width: 2px; }
+  .bar.near { background: #1a7f37; } .bar.medium { background: #9a6700; }
   .bar.far { background: #bbb; }
   tr.hot td { background: #fff3cd !important; }
   #radar-wrap { margin-top: 16px; }
@@ -69,41 +71,21 @@
   .radar-caption { color: #666; font-size: 0.85em; text-align: center; margin-top: 4px; }
   .empty { background: #f4f4f4; border-radius: 6px; padding: 20px; text-align: center;
            color: #666; margin-top: 12px; }
-</style>
-</head>
-<body>
-<h1>btscan</h1>
-<p class="subtitle">A minimal Bluetooth Low Energy scanner for macOS</p>
+```
 
-<h2>What is this?</h2>
-<p>
-  btscan is a small Python command-line app that scans the air for nearby
-  Bluetooth Low Energy (BLE) devices — phones, earbuds, watches, trackers,
-  speakers — and reports what they are: manufacturer, a best-effort type
-  guess, an estimated distance, and raw signal details. Radio range is
-  roughly 25–30 yards.
-</p>
+- [ ] **Step 2: Replace the results section markup**
 
-<h2>Usage</h2>
-<pre>python3 app.py                 # one ~10s scan, prints a table, exits
-python3 app.py --watch         # live-updating table until Ctrl+C
-python3 app.py --every 15      # a scan every 15 minutes until Ctrl+C
-python3 app.py --radius 15     # only devices within ~15 yd (10/15/20/25)
-python3 app.py --export        # also write the scan to scan.json (feeds this page)</pre>
+Replace this:
 
-<h2>Honest caveats</h2>
-<div class="caveats">
-  <ul>
-    <li>BLE only — very old classic-Bluetooth-only gear won't appear.</li>
-    <li>Distances are estimated from signal strength and can be off by
-        several yards; walls and bodies make devices look farther away.</li>
-    <li>Most devices randomize their addresses, so the same phone can appear
-        under different addresses across scans.</li>
-    <li>Device names are <strong>never</strong> included in published
-        results, for privacy.</li>
-  </ul>
-</div>
+```html
+<h2>Latest published scan</h2>
+<p id="scan-meta">Loading scan results…</p>
+<div id="results"></div>
+```
 
+with:
+
+```html
 <h2>Latest published scan</h2>
 <div class="controls" id="controls" hidden>
   <div class="ctl-row">
@@ -135,18 +117,29 @@ python3 app.py --export        # also write the scan to scan.json (feeds this pa
     only, not direction.</p>
 </div>
 <div id="results"></div>
+```
 
-<h2>Publishing a new scan</h2>
-<pre>cd btscan && python3 app.py --export
-git add btscan/scan.json
-git commit -m "data: update published scan" && git push</pre>
-<p>
-  Or keep this page current automatically — <code>./publish.sh 15</code>
-  scans, exports, and pushes every 15 minutes until stopped.
-</p>
-<p>This page shows a pushed snapshot, not live data.</p>
+- [ ] **Step 3: Verify the shell renders**
 
-<script>
+Load `http://localhost:8009/btscan/`. The controls panel is still `hidden` (no JS yet wires it), the prose sections are unchanged, and the page has no console errors.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add btscan/index.html
+git commit -m "feat(page): add controls shell and styles for interactive scan view"
+```
+
+---
+
+### Task 2: Data load, facets, and the summary line
+
+**Files:**
+- Modify: `btscan/index.html` (`<script>`)
+
+- [ ] **Step 1: Replace the whole `<script>` body with state, load, and facet derivation**
+
+```js
 const PROXIMITIES = ["near", "medium", "far"];
 const RADII = [10, 15, 20, 25];
 const RSSI_MIN = -105, RSSI_MAX = -50;
@@ -164,9 +157,7 @@ function deriveMakers(devices) {
   for (const d of devices) counts.set(d.manufacturer, (counts.get(d.manufacturer) || 0) + 1);
   const buckets = new Map();
   const other = [];
-  for (const [name, n] of counts) {
-    if (n >= 2) buckets.set(name, [name]); else other.push(name);
-  }
+  for (const [name, n] of counts) (n >= 2 ? buckets.set(name, [name]) : other.push(name));
   const sorted = new Map([...buckets.entries()].sort(
     (a, b) => counts.get(b[0]) - counts.get(a[0])));
   if (other.length) sorted.set("Other", other);
@@ -177,7 +168,6 @@ function relativeAge(stamp) {
   const then = new Date(stamp.replace(" ", "T"));
   if (isNaN(then)) return null;
   const days = Math.floor((Date.now() - then) / 86400000);
-  if (days < -1) return null;   // more than a day in the future: bad clock, say nothing
   if (days < 1) return "today";
   if (days === 1) return "yesterday";
   if (days < 30) return `${days} days ago`;
@@ -186,7 +176,11 @@ function relativeAge(stamp) {
   const years = Math.round(days / 365);
   return `${years} year${years === 1 ? "" : "s"} ago`;
 }
+```
 
+- [ ] **Step 2: Add the fetch and the meta renderer**
+
+```js
 function renderMeta(shown) {
   const age = relativeAge(SCAN.scanned_at);
   const count = shown === DEVICES.length
@@ -196,6 +190,49 @@ function renderMeta(shown) {
     `${count} · scanned ${SCAN.scanned_at}${age ? ` (${age})` : ""} (scanner's local time)`;
 }
 
+fetch("scan.json")
+  .then((r) => { if (!r.ok) throw new Error("scan.json not found"); return r.json(); })
+  .then((scan) => {
+    SCAN = scan;
+    DEVICES = scan.devices || [];
+    if (!DEVICES.length) {
+      document.getElementById("scan-meta").textContent =
+        `No devices in this scan (scanned ${scan.scanned_at}).`;
+      return;
+    }
+    MAKER_BUCKETS = deriveMakers(DEVICES);
+    document.getElementById("controls").hidden = false;
+    document.getElementById("radar-wrap").hidden = false;
+    buildControls();
+    render();
+  })
+  .catch((err) => {
+    document.getElementById("scan-meta").textContent =
+      "No scan published yet (" + err.message + ").";
+  });
+```
+
+- [ ] **Step 3: Verify in the browser**
+
+Reload the page. Expected: the meta line reads `41 devices · scanned 2026-06-12 23:44:08 (3 months ago) (scanner's local time)`. `buildControls`/`render` are not defined yet, so a `ReferenceError` in the console at this step is expected and is fixed by Task 3.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add btscan/index.html
+git commit -m "feat(page): load scan, derive maker facets, show snapshot age"
+```
+
+---
+
+### Task 3: Filter pipeline, controls wiring, and table render
+
+**Files:**
+- Modify: `btscan/index.html` (`<script>`)
+
+- [ ] **Step 1: Add the pure filter function**
+
+```js
 function applyFilters(devices, s) {
   const q = s.search.trim().toLowerCase();
   const names = new Set();
@@ -208,19 +245,17 @@ function applyFilters(devices, s) {
     return true;
   });
 }
+```
 
+- [ ] **Step 2: Build the controls**
+
+```js
 function chip(label, count, pressed, onClick) {
   const b = document.createElement("button");
   b.type = "button";
   b.className = "chip";
   b.setAttribute("aria-pressed", String(pressed));
-  b.textContent = label;
-  if (count !== null) {
-    const n = document.createElement("span");
-    n.className = "n";
-    n.textContent = count;
-    b.appendChild(n);
-  }
+  b.innerHTML = count === null ? label : `${label}<span class="n">${count}</span>`;
   b.addEventListener("click", () => { onClick(); render(); });
   return b;
 }
@@ -237,9 +272,9 @@ function buildControls() {
   }));
 
   const prox = document.getElementById("proximity");
-  prox.replaceChildren(...PROXIMITIES.map((pr) => chip(
-    pr, DEVICES.filter((d) => d.proximity === pr).length, state.proximity.has(pr),
-    () => state.proximity.has(pr) ? state.proximity.delete(pr) : state.proximity.add(pr))));
+  prox.replaceChildren(...PROXIMITIES.map((p) => chip(
+    p, DEVICES.filter((d) => d.proximity === p).length, state.proximity.has(p),
+    () => state.proximity.has(p) ? state.proximity.delete(p) : state.proximity.add(p))));
 
   const makers = document.getElementById("makers");
   makers.replaceChildren(...[...MAKER_BUCKETS.entries()].map(([key, names]) => chip(
@@ -275,7 +310,11 @@ function syncControls() {
   document.getElementById("group-toggle")
     .setAttribute("aria-pressed", String(state.groupByType));
 }
+```
 
+- [ ] **Step 3: Add the row/table renderers and `render()`**
+
+```js
 const COLUMNS = [
   { key: "manufacturer", label: "Manufacturer" },
   { key: "distance_yards", label: "Distance" },
@@ -285,25 +324,23 @@ const COLUMNS = [
   { key: "address", label: "Address" },
 ];
 
-const esc = (v) => String(v).replace(/[&<>"]/g,
-  (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-
 function rowHtml(d) {
   const pct = Math.max(0, Math.min(1, (d.rssi_dbm - RSSI_MIN) / (RSSI_MAX - RSSI_MIN)));
-  return `<tr data-addr="${esc(d.address)}">
-    <td>${esc(d.manufacturer)}</td>
+  return `<tr data-addr="${d.address}">
+    <td>${d.manufacturer}</td>
     <td>~${d.distance_yards} yd</td>
-    <td class="${esc(d.proximity)}">${esc(d.proximity)}</td>
-    <td><span class="bar ${esc(d.proximity)}" style="width:${Math.round(pct * 60)}px"></span>${d.rssi_dbm} dBm</td>
-    <td>${d.tx_power_dbm ?? "\u2014"}</td>
-    <td><code>${esc(d.address.slice(0, 8))}\u2026</code></td>
+    <td class="${d.proximity}">${d.proximity}</td>
+    <td><span class="bar ${d.proximity}" style="width:${Math.round(pct * 60)}px"></span>
+        ${d.rssi_dbm} dBm</td>
+    <td>${d.tx_power_dbm ?? "—"}</td>
+    <td><code>${d.address.slice(0, 8)}…</code></td>
   </tr>`;
 }
 
 function tableHtml(devices) {
   const heads = COLUMNS.map((c) => {
     const active = state.sort && state.sort.key === c.key;
-    const arrow = active ? (state.sort.dir === "asc" ? " \u25b2" : " \u25bc") : "";
+    const arrow = active ? (state.sort.dir === "asc" ? " ▲" : " ▼") : "";
     return `<th class="sortable" data-key="${c.key}">${c.label}<span class="arrow">${arrow}</span></th>`;
   }).join("");
   return `<table><thead><tr>${heads}</tr></thead>
@@ -332,7 +369,7 @@ function render() {
       .sort((a, b) => b[1].length - a[1].length)
       .map(([type, list]) => {
         list.sort((a, b) => a.distance_yards - b.distance_yards);
-        return `<h3>${esc(type)} <span class="count">${list.length} device${
+        return `<h3>${type} <span class="count">${list.length} device${
           list.length === 1 ? "" : "s"}</span></h3>${tableHtml(list)}`;
       }).join("");
   } else {
@@ -342,17 +379,59 @@ function render() {
   wireTable();
   drawRadar(shown);
 }
+```
 
+- [ ] **Step 4: Add temporary stubs so this task runs standalone**
+
+`render()` above calls three functions that Tasks 4 and 5 provide. Add these
+stubs now so the page works at the end of this task; Task 4 replaces the first
+two and Task 5 replaces the third.
+
+```js
+function sortDevices(devices) {
+  return devices.slice().sort((a, b) => a.distance_yards - b.distance_yards);
+}
+function wireTable() {}
+function drawRadar() {}
+```
+
+- [ ] **Step 5: Verify filtering in the browser**
+
+Reload. Check each in turn:
+- `41 devices` shown, grouped by type as before, now with signal bars.
+- Click `15 yd` → meta reads `N of 41 devices`, all rows ≤ 15 yd.
+- Click the `far` chip off → no `far` rows remain.
+- Type `sonos` in search → only the Sonos device.
+- Click the `Apple` maker chip → 26 devices.
+- Combine two filters → both apply.
+- Filter to nothing → "No devices match these filters."
+- `Reset` → back to 41.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add btscan/index.html
+git commit -m "feat(page): filter by search, radius, proximity, and manufacturer"
+```
+
+---
+
+### Task 4: Column sorting and the grouped/flat switch
+
+**Files:**
+- Modify: `btscan/index.html` (`<script>`)
+
+- [ ] **Step 1: Replace the `sortDevices` and `wireTable` stubs from Task 3**
+
+```js
 function sortDevices(devices, sort) {
   if (!sort) return devices.slice().sort((a, b) => a.distance_yards - b.distance_yards);
   const dir = sort.dir === "asc" ? 1 : -1;
   return devices.slice().sort((a, b) => {
-    const x = a[sort.key], y = b[sort.key];
+    let x = a[sort.key], y = b[sort.key];
     // Nulls (tx_power_dbm) always sort last, whichever direction is active.
-    const xNull = x === null || x === undefined, yNull = y === null || y === undefined;
-    if (xNull && yNull) return 0;
-    if (xNull) return 1;
-    if (yNull) return -1;
+    if (x === null || x === undefined) return 1;
+    if (y === null || y === undefined) return -1;
     if (typeof x === "string") return x.localeCompare(y) * dir;
     return (x - y) * dir;
   });
@@ -370,19 +449,48 @@ function wireTable() {
     });
   });
 }
+```
 
+- [ ] **Step 2: Verify sorting in the browser**
+
+Reload. Check:
+- Click `Distance` → the grouped headings disappear, one flat table, nearest first, `▲` on Distance.
+- Click `Distance` again → farthest first, `▼`.
+- Click `Manufacturer` → alphabetical.
+- Click `TX power` → rows with `—` sit at the bottom in both directions.
+- Click `Group by type` → groups return and the arrow clears.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add btscan/index.html
+git commit -m "feat(page): sortable columns with grouped/flat switching"
+```
+
+---
+
+### Task 5: Radar plot and row highlighting
+
+**Files:**
+- Modify: `btscan/index.html` (`<script>`)
+
+- [ ] **Step 1: Replace the `drawRadar` stub from Task 3**
+
+Distances run 0.8 to 629 yd against a ~25 yd usable radio range, so the scale
+is linear to 25 yd and everything beyond is pinned to an outer "25+" band.
+
+```js
 const SVG_NS = "http://www.w3.org/2000/svg";
 const CX = 180, CY = 180, R_MAX = 150, OUTER = 165;
 
-function el(name, attrs, text) {
+function el(name, attrs) {
   const n = document.createElementNS(SVG_NS, name);
   for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
-  if (text !== undefined) n.textContent = text;
   return n;
 }
 
-// Stable pseudo-angle from the address - deterministic, but meaningless: BLE
-// gives distance, never bearing. The caption under the plot says so.
+// Stable pseudo-angle from the address — deterministic, but meaningless:
+// BLE gives distance, never bearing. The caption says so on the page.
 function angleFor(address) {
   let h = 0;
   for (let i = 0; i < address.length; i++) h = (h * 31 + address.charCodeAt(i)) % 3600;
@@ -393,15 +501,15 @@ function drawRadar(devices) {
   const svg = document.getElementById("radar");
   svg.replaceChildren();
   for (const ring of RADII) {
-    const r = (ring / 25) * R_MAX;
-    svg.appendChild(el("circle", { cx: CX, cy: CY, r, fill: "none", stroke: "#e0e0e0" }));
-    svg.appendChild(el("text", { x: CX + 3, y: CY - r + 11, fill: "#aaa",
-      "font-size": "9" }, `${ring} yd`));
+    svg.appendChild(el("circle", { cx: CX, cy: CY, r: (ring / 25) * R_MAX,
+      fill: "none", stroke: "#e0e0e0" }));
+    svg.appendChild(el("text", { x: CX + 3, y: CY - (ring / 25) * R_MAX + 11,
+      fill: "#aaa", "font-size": "9" })).textContent = `${ring} yd`;
   }
   svg.appendChild(el("circle", { cx: CX, cy: CY, r: OUTER, fill: "none",
     stroke: "#e0e0e0", "stroke-dasharray": "3 3" }));
   svg.appendChild(el("text", { x: CX + 3, y: CY - OUTER + 11, fill: "#aaa",
-    "font-size": "9" }, "25+ yd"));
+    "font-size": "9" })).textContent = "25+ yd";
   svg.appendChild(el("circle", { cx: CX, cy: CY, r: 2, fill: "#999" }));
 
   const fill = { near: "#1a7f37", medium: "#9a6700", far: "#bbb" };
@@ -413,45 +521,73 @@ function drawRadar(devices) {
     dot.dataset.addr = d.address;
     dot.addEventListener("mouseenter", () => highlight(d.address, true));
     dot.addEventListener("mouseleave", () => highlight(d.address, false));
-    dot.appendChild(el("title", {},
-      `${d.manufacturer} \u00b7 ${d.type} \u00b7 ~${d.distance_yards} yd \u00b7 ${d.rssi_dbm} dBm`));
+    const title = el("title", {});
+    title.textContent = `${d.manufacturer} · ${d.type} · ~${d.distance_yards} yd · ${d.rssi_dbm} dBm`;
+    dot.appendChild(title);
     svg.appendChild(dot);
   }
 }
 
 function highlight(address, on) {
-  const row = document.querySelector(`tr[data-addr="${CSS.escape(address)}"]`);
+  const row = document.querySelector(`tr[data-addr="${address}"]`);
   if (!row) return;
   row.classList.toggle("hot", on);
   if (on) row.scrollIntoView({ block: "nearest", behavior: "smooth" });
 }
+```
 
-let loaded = false;
+- [ ] **Step 2: Verify the radar in the browser**
 
-fetch("scan.json")
-  .then((r) => { if (!r.ok) throw new Error("scan.json not found"); return r.json(); })
-  .then((scan) => {
-    loaded = true;
-    SCAN = scan;
-    DEVICES = scan.devices || [];
-    if (!DEVICES.length) {
-      document.getElementById("scan-meta").textContent =
-        `No devices in this scan (scanned ${scan.scanned_at}).`;
-      return;
-    }
-    MAKER_BUCKETS = deriveMakers(DEVICES);
-    document.getElementById("controls").hidden = false;
-    document.getElementById("radar-wrap").hidden = false;
-    buildControls();
-    render();
-  })
-  .catch((err) => {
-    // Distinguish a missing/!unreadable scan.json from a failure while rendering
-    // one that did load - otherwise a render bug reports itself as "no scan".
-    document.getElementById("scan-meta").textContent = loaded
-      ? "Could not render this scan (" + err.message + ")."
-      : "No scan published yet (" + err.message + ").";
-  });
-</script>
-</body>
-</html>
+Reload. Check:
+- Rings at 10/15/20/25 yd plus a dashed `25+` band; 41 dots, colored by proximity.
+- Hovering a dot shows a tooltip and highlights its table row in yellow.
+- Applying a filter (e.g. `15 yd`) removes the excluded dots.
+- The caption about arbitrary angle is present under the plot.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add btscan/index.html
+git commit -m "feat(page): filter-aware radar plot with row highlighting"
+```
+
+---
+
+### Task 6: Full verification pass
+
+**Files:** none modified unless a defect is found.
+
+- [ ] **Step 1: Confirm the Python suite is untouched and green**
+
+Run: `python3 -m pytest btscan/tests -v`
+Expected: 13 passed.
+
+- [ ] **Step 2: Walk the spec's success criteria in the browser**
+
+Starting from a fresh load, in one session without reloading:
+narrow to devices within 15 yd → isolate one manufacturer → sort by RSSI →
+confirm the radar and meta line both track every step → Reset returns to
+41 devices, grouped, unsorted.
+
+- [ ] **Step 3: Check the failure paths**
+
+- Temporarily rename `scan.json`, reload: the page reads "No scan published
+  yet (scan.json not found)." and the controls and radar stay hidden. Restore it.
+- Filter to an empty set: the empty-state message and a working Reset.
+
+- [ ] **Step 4: Commit any fixes**
+
+```bash
+git add btscan/index.html
+git commit -m "fix: adjustments from the interactive page verification pass"
+```
+
+Skip this commit if nothing needed fixing.
+
+- [ ] **Step 5: Publish**
+
+```bash
+git push
+```
+
+The page is live at https://dorothyk98.github.io/dhsi/btscan/ within a minute.
