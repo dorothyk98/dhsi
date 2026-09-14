@@ -35,6 +35,40 @@
   #scan-meta { color: #666; }
   #results h3 { margin: 22px 0 4px; }
   #results h3 .count { color: #888; font-weight: normal; font-size: 0.85em; }
+  .controls { background: #f9f9f9; border: 1px solid #e3e3e3; border-radius: 6px;
+              padding: 14px 16px; margin-top: 12px; display: grid; gap: 12px; }
+  .ctl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .ctl-label { font-size: 0.8em; color: #666; text-transform: uppercase;
+               letter-spacing: 0.04em; min-width: 92px; }
+  #search { flex: 1; min-width: 180px; padding: 6px 10px; font-size: 0.9em;
+            border: 1px solid #ccc; border-radius: 6px; font-family: inherit; }
+  .chip { padding: 4px 10px; font-size: 0.85em; border: 1px solid #ccc;
+          border-radius: 999px; background: #fff; cursor: pointer; font-family: inherit; }
+  .chip:hover { border-color: #888; }
+  .chip[aria-pressed="true"] { background: #222; color: #fff; border-color: #222; }
+  .chip .n { opacity: 0.6; margin-left: 4px; }
+  .seg { display: inline-flex; border: 1px solid #ccc; border-radius: 6px; overflow: hidden; }
+  .seg button { padding: 4px 12px; font-size: 0.85em; border: none; background: #fff;
+                cursor: pointer; border-right: 1px solid #ddd; font-family: inherit; }
+  .seg button:last-child { border-right: none; }
+  .seg button[aria-pressed="true"] { background: #222; color: #fff; }
+  #reset { margin-left: auto; padding: 4px 12px; font-size: 0.85em; border: 1px solid #ccc;
+           border-radius: 6px; background: #fff; cursor: pointer; font-family: inherit; }
+  th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+  th.sortable:hover { background: #e6e6e6; }
+  th .arrow { color: #888; font-size: 0.8em; }
+  .bar { display: inline-block; height: 8px; border-radius: 2px; vertical-align: middle;
+         min-width: 2px; margin-right: 6px; }
+  .bar.near { background: #1a7f37; }
+  .bar.medium { background: #9a6700; }
+  .bar.far { background: #bbb; }
+  tr.hot td { background: #fff3cd !important; }
+  #radar-wrap { margin-top: 16px; }
+  #radar { display: block; margin: 0 auto; max-width: 100%; }
+  #radar circle.dev { cursor: pointer; }
+  .radar-caption { color: #666; font-size: 0.85em; text-align: center; margin-top: 4px; }
+  .empty { background: #f4f4f4; border-radius: 6px; padding: 20px; text-align: center;
+           color: #666; margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -71,7 +105,35 @@ python3 app.py --export        # also write the scan to scan.json (feeds this pa
 </div>
 
 <h2>Latest published scan</h2>
+<div class="controls" id="controls" hidden>
+  <div class="ctl-row">
+    <span class="ctl-label">Search</span>
+    <input id="search" type="search" placeholder="manufacturer, type, or address…"
+           autocomplete="off" />
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <div class="ctl-row">
+    <span class="ctl-label">Within</span>
+    <span class="seg" id="radius"></span>
+    <span class="ctl-label" style="min-width:auto">Proximity</span>
+    <span id="proximity"></span>
+  </div>
+  <div class="ctl-row">
+    <span class="ctl-label">Maker</span>
+    <span id="makers"></span>
+  </div>
+  <div class="ctl-row">
+    <span class="ctl-label">View</span>
+    <button class="chip" id="group-toggle" type="button" aria-pressed="true">Group by type</button>
+  </div>
+</div>
 <p id="scan-meta">Loading scan results…</p>
+<div id="radar-wrap" hidden>
+  <svg id="radar" viewBox="0 0 360 360" width="360" height="360" role="img"
+       aria-label="Devices by estimated distance"></svg>
+  <p class="radar-caption">Angle is arbitrary — signal strength gives distance
+    only, not direction.</p>
+</div>
 <div id="results"></div>
 
 <h2>Publishing a new scan</h2>
