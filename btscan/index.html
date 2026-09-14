@@ -343,11 +343,35 @@ function render() {
   drawRadar(shown);
 }
 
-// Replaced by Task 4 (sortDevices, wireTable) and Task 5 (drawRadar).
-function sortDevices(devices) {
-  return devices.slice().sort((a, b) => a.distance_yards - b.distance_yards);
+function sortDevices(devices, sort) {
+  if (!sort) return devices.slice().sort((a, b) => a.distance_yards - b.distance_yards);
+  const dir = sort.dir === "asc" ? 1 : -1;
+  return devices.slice().sort((a, b) => {
+    const x = a[sort.key], y = b[sort.key];
+    // Nulls (tx_power_dbm) always sort last, whichever direction is active.
+    const xNull = x === null || x === undefined, yNull = y === null || y === undefined;
+    if (xNull && yNull) return 0;
+    if (xNull) return 1;
+    if (yNull) return -1;
+    if (typeof x === "string") return x.localeCompare(y) * dir;
+    return (x - y) * dir;
+  });
 }
-function wireTable() {}
+
+function wireTable() {
+  document.querySelectorAll("th.sortable").forEach((th) => {
+    th.addEventListener("click", () => {
+      const key = th.dataset.key;
+      state.sort = state.sort && state.sort.key === key
+        ? { key, dir: state.sort.dir === "asc" ? "desc" : "asc" }
+        : { key, dir: "asc" };
+      state.groupByType = false;   // sorting flattens the grouped view
+      render();
+    });
+  });
+}
+
+// Replaced by Task 5.
 function drawRadar() {}
 
 let loaded = false;
