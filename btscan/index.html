@@ -428,7 +428,10 @@ function highlight(address, on) {
 
 let loaded = false;
 
-fetch("scan.json")
+// Always revalidate: GitHub Pages serves scan.json with a cache lifetime, so a
+// returning visitor would otherwise see the previous scan after a new publish.
+// "no-cache" still allows a cheap 304 when the file genuinely has not changed.
+fetch("scan.json", { cache: "no-cache" })
   .then((r) => { if (!r.ok) throw new Error("scan.json not found"); return r.json(); })
   .then((scan) => {
     loaded = true;
