@@ -147,47 +147,81 @@ git commit -m "data: update published scan" && git push</pre>
 <p>This page shows a pushed snapshot, not live data.</p>
 
 <script>
-  const order = { near: 0, medium: 1, far: 2 };
-  fetch("scan.json")
-    .then((response) => {
-      if (!response.ok) throw new Error("scan.json not found");
-      return response.json();
-    })
-    .then((scan) => {
+const PROXIMITIES = ["near", "medium", "far"];
+const RADII = [10, 15, 20, 25];
+const RSSI_MIN = -105, RSSI_MAX = -50;
+
+const state = {
+  search: "", radius: null, proximity: new Set(PROXIMITIES),
+  makers: new Set(), sort: null, groupByType: true,
+};
+
+let DEVICES = [], SCAN = null, MAKER_BUCKETS = new Map();
+
+// Manufacturers with 2+ devices get their own chip; the rest collapse to "Other".
+function deriveMakers(devices) {
+  const counts = new Map();
+  for (const d of devices) counts.set(d.manufacturer, (counts.get(d.manufacturer) || 0) + 1);
+  const buckets = new Map();
+  const other = [];
+  for (const [name, n] of counts) {
+    if (n >= 2) buckets.set(name, [name]); else other.push(name);
+  }
+  const sorted = new Map([...buckets.entries()].sort(
+    (a, b) => counts.get(b[0]) - counts.get(a[0])));
+  if (other.length) sorted.set("Other", other);
+  return sorted;
+}
+
+function relativeAge(stamp) {
+  const then = new Date(stamp.replace(" ", "T"));
+  if (isNaN(then)) return null;
+  const days = Math.floor((Date.now() - then) / 86400000);
+  if (days < -1) return null;   // more than a day in the future: bad clock, say nothing
+  if (days < 1) return "today";
+  if (days === 1) return "yesterday";
+  if (days < 30) return `${days} days ago`;
+  const months = Math.round(days / 30);
+  if (months < 12) return `${months} month${months === 1 ? "" : "s"} ago`;
+  const years = Math.round(days / 365);
+  return `${years} year${years === 1 ? "" : "s"} ago`;
+}
+
+function renderMeta(shown) {
+  const age = relativeAge(SCAN.scanned_at);
+  const count = shown === DEVICES.length
+    ? `${DEVICES.length} devices`
+    : `${shown} of ${DEVICES.length} devices`;
+  document.getElementById("scan-meta").textContent =
+    `${count} · scanned ${SCAN.scanned_at}${age ? ` (${age})` : ""} (scanner's local time)`;
+}
+
+let loaded = false;
+
+fetch("scan.json")
+  .then((r) => { if (!r.ok) throw new Error("scan.json not found"); return r.json(); })
+  .then((scan) => {
+    loaded = true;
+    SCAN = scan;
+    DEVICES = scan.devices || [];
+    if (!DEVICES.length) {
       document.getElementById("scan-meta").textContent =
-        `${scan.device_count} devices · scanned ${scan.scanned_at} (scanner's local time)`;
-      const groups = new Map();
-      for (const d of scan.devices) {
-        if (!groups.has(d.type)) groups.set(d.type, []);
-        groups.get(d.type).push(d);
-      }
-      const byCount = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
-      document.getElementById("results").innerHTML = byCount.map(([type, devices]) => {
-        devices.sort((a, b) => a.distance_yards - b.distance_yards);
-        const rows = devices.map((d) => `
-          <tr>
-            <td>${d.manufacturer}</td>
-            <td>~${d.distance_yards} yd</td>
-            <td class="${d.proximity}">${d.proximity}</td>
-            <td>${d.rssi_dbm} dBm</td>
-            <td>${d.tx_power_dbm ?? "—"}</td>
-            <td><code>${d.address.slice(0, 8)}…</code></td>
-          </tr>`).join("");
-        return `
-          <h3>${type} <span class="count">${devices.length} device${devices.length === 1 ? "" : "s"}</span></h3>
-          <table>
-            <thead><tr>
-              <th>Manufacturer</th><th>Distance</th><th>Proximity</th>
-              <th>RSSI</th><th>TX power</th><th>Address</th>
-            </tr></thead>
-            <tbody>${rows}</tbody>
-          </table>`;
-      }).join("");
-    })
-    .catch((err) => {
-      document.getElementById("scan-meta").textContent =
-        "No scan published yet (" + err.message + ").";
-    });
+        `No devices in this scan (scanned ${scan.scanned_at}).`;
+      return;
+    }
+    MAKER_BUCKETS = deriveMakers(DEVICES);
+    document.getElementById("controls").hidden = false;
+    document.getElementById("radar-wrap").hidden = false;
+    buildControls();
+    render();
+  })
+  .catch((err) => {
+    // Distinguish a missing/!unreadable scan.json from a failure while rendering
+    // one that did load - otherwise a render bug reports itself as "no scan".
+    document.getElementById("scan-meta").textContent = loaded
+      ? "Could not render this scan (" + err.message + ")."
+      : "No scan published yet (" + err.message + ").";
+  });
 </script>
 </body>
 </html>
