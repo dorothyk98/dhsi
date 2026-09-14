@@ -381,7 +381,21 @@ function render() {
 }
 ```
 
-- [ ] **Step 4: Verify filtering in the browser**
+- [ ] **Step 4: Add temporary stubs so this task runs standalone**
+
+`render()` above calls three functions that Tasks 4 and 5 provide. Add these
+stubs now so the page works at the end of this task; Task 4 replaces the first
+two and Task 5 replaces the third.
+
+```js
+function sortDevices(devices) {
+  return devices.slice().sort((a, b) => a.distance_yards - b.distance_yards);
+}
+function wireTable() {}
+function drawRadar() {}
+```
+
+- [ ] **Step 5: Verify filtering in the browser**
 
 Reload. Check each in turn:
 - `41 devices` shown, grouped by type as before, now with signal bars.
@@ -393,7 +407,7 @@ Reload. Check each in turn:
 - Filter to nothing → "No devices match these filters."
 - `Reset` → back to 41.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
 git add btscan/index.html
@@ -407,7 +421,7 @@ git commit -m "feat(page): filter by search, radius, proximity, and manufacturer
 **Files:**
 - Modify: `btscan/index.html` (`<script>`)
 
-- [ ] **Step 1: Add `sortDevices` and `wireTable`**
+- [ ] **Step 1: Replace the `sortDevices` and `wireTable` stubs from Task 3**
 
 ```js
 function sortDevices(devices, sort) {
@@ -460,7 +474,7 @@ git commit -m "feat(page): sortable columns with grouped/flat switching"
 **Files:**
 - Modify: `btscan/index.html` (`<script>`)
 
-- [ ] **Step 1: Add the radar renderer**
+- [ ] **Step 1: Replace the `drawRadar` stub from Task 3**
 
 Distances run 0.8 to 629 yd against a ~25 yd usable radio range, so the scale
 is linear to 25 yd and everything beyond is pinned to an outer "25+" band.
